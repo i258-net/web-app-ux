@@ -20,17 +20,17 @@ Labels: **[verified]** = exercised against this environment on the `updated:` da
 | CLI | `ov` 0.5.1 (`~/.local/bin/ov`) [verified] |
 | Server | v0.5.2.1, healthy, API-key auth; account `i258`, user `daniel` [verified] |
 | Existing convention | Git repositories are ingested from their **Git URL** with a recurring **Watch** task, to `viking://resources/repos/<org>/<repo>` (e.g. `https://github.com/i258-net/docs.git` → `viking://resources/repos/i258-net/docs`, interval 60 min, `semantic_and_vectors`) [verified: `ov task watch ls`] |
-| Target for this repository | `viking://resources/repos/<org>/web-app-ux` once the GitHub remote exists |
+| Target for this repository | `viking://resources/repos/i258-net/web-app-ux` (remote: `https://github.com/i258-net/web-app-ux`, pushed 2026-11-08) |
 
 ## 1. Ingestion (the intended way: Git source + Watch)
 
-Prerequisite: the repository is pushed to a Git remote the OpenViking server can reach.
+Prerequisite: the repository is pushed to a Git remote the OpenViking server can reach (done: `https://github.com/i258-net/web-app-ux`, private; the server needs read credentials as for `i258-net/docs`).
 
 Either in the web UI (**Scheduled Sync** → add) or with the CLI:
 
 ```sh
-ov add-resource https://github.com/<org>/web-app-ux.git \
-  --to viking://resources/repos/<org>/web-app-ux \
+ov add-resource https://github.com/i258-net/web-app-ux.git \
+  --to viking://resources/repos/i258-net/web-app-ux \
   --ignore-dirs '.git,.github,assets,scripts' \
   --tags 'repo=web-app-ux,kind=ux-knowledge' \
   --processing-mode semantic_and_vectors \
@@ -92,8 +92,8 @@ With a Git Watch: **nothing to do** beyond merging to the watched branch. The ne
 | Date | What was done | Result |
 |---|---|---|
 | 2026-11-08 | CLI inventory, health, `find -o json` shape, `stat`/`attrs` fields, existing Git watch config | Verified as described |
-| 2026-11-08 | **Test ingestion of a local folder snapshot** to `viking://resources/repos/web-app-ux` (not the intended Git-watch path; done before confirming the owner's convention) | 121 files uploaded, 0 failures; parser split and renamed files as described in §2; semantic processing of `patterns/` still running at last check; retrieval tests 1/16 while abstracts were "not ready". **This snapshot should be removed and replaced by the Git watch once the remote exists.** |
-| — | Git-watch ingestion of this repository | Not yet performed (remote not connected) |
+| 2026-11-08 | **Test ingestion of a local folder snapshot** to `viking://resources/repos/web-app-ux` (not the intended Git-watch path; done before confirming the owner's convention) | 121 files uploaded, 0 failures; parser split and renamed files as described in §2; semantic processing of `patterns/` still running at last check; retrieval tests 1/16 while abstracts were "not ready". **Removed on 2026-11-08** (`ov rm … --recursive --wait`; ~350 entries, no memory references) after cancelling the still-running processing task. |
+| — | Git-watch ingestion of this repository | To be added by the owner via Scheduled Sync (remote pushed 2026-11-08) |
 | — | `parse_mode:no_split` | Not exercised |
 | — | Retrieval tests against the Git-watched resource | Not yet performed |
 
