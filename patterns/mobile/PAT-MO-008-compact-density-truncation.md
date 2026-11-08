@@ -3,7 +3,7 @@ id: PAT-MO-008
 title: Compact density, truncation, line clamping, and horizontal carousels
 type: pattern
 scope: mobile
-topics: [density, truncation, line-clamp, ellipsis, carousel, see-all, show-more, reflow, text-size]
+topics: [density, truncation, line-clamp, ellipsis, carousel, see-all, show-more, reflow, text-size, visual-hierarchy, comparison]
 platforms: [mobile, tablet]
 viewports: [compact, medium]
 inputs: [touch, keyboard, assistive-tech]

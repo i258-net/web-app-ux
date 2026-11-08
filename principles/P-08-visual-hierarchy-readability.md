@@ -20,7 +20,7 @@ The eye lands first on what matters most and reads comfortably from there. Impor
 
 - Users scan rather than read; NN/g's eye-tracking work (F-pattern and later studies) shows that strong headings and front-loaded content guide attention while flat pages are skimmed inefficiently (E2).
 - Contrast and size are normative accessibility requirements: WCAG 1.4.3 (4.5:1 for text), 1.4.11 (3:1 for UI components), 1.4.4 (resize to 200%), 1.4.12 (text spacing) (E1).
-- Overlong lines slow reading; typographic guidance converges on roughly 45–75 characters per line, though empirical results vary by task and medium (E4 with partial E2 support).
+- Overlong lines slow reading; Baymard's public readability article recommends roughly 50–75 characters per line for prose (E2, e-commerce context); wider typographic practice cites a similar range, and results vary by task and medium.
 
 ## How to recognize it
 
@@ -40,7 +40,8 @@ The eye lands first on what matters most and reads comfortably from there. Impor
 - Pernice, K. "F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant." NN/g, 2017. https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/ — E2.
 - W3C WCAG 2.2 SC 1.4.3, 1.4.4, 1.4.11, 1.4.12. https://www.w3.org/TR/WCAG22/#contrast-minimum — E1.
 - Butterick, M. *Practical Typography*, "Line length." https://practicaltypography.com/line-length.html — E4.
-- web.dev, Learn Responsive Design: Typography. https://web.dev/learn/design/typography — E3.
+- web.dev, Learn Responsive Design: Typography (course guidance). https://web.dev/learn/design/typography — E4.
+- Baymard Institute, "Readability: The Optimal Line Length". https://baymard.com/research-articles/readability-the-optimal-line-length — E2; e-commerce context.
 
 ## Evaluation
 

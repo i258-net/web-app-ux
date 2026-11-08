@@ -53,7 +53,7 @@ Exact WCAG wording is in the specification; links go to each success criterion. 
 | QG-024 | Error suggestions provided when known | standard | [SC 3.3.3 (AA)](https://www.w3.org/TR/WCAG22/#error-suggestion) | M |
 | QG-025 | Legal, financial, or data-modifying submissions are reversible, checked, or confirmable | standard | [SC 3.3.4 (AA)](https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data) | M |
 | QG-026 | Previously entered information is auto-populated or selectable, not re-typed, within a process | standard | [SC 3.3.7 Redundant Entry (A)](https://www.w3.org/TR/WCAG22/#redundant-entry) | M |
-| QG-027 | Authentication does not require a cognitive function test without alternative or assistance (paste and password managers not blocked) | standard | [SC 3.3.8 Accessible Authentication (Minimum) (AA)](https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum) | M |
+| QG-027 | Authentication does not require a cognitive function test without alternative or assistance (paste and password managers not blocked). Applies to each step of an authentication process; password *creation* at sign-up is not authentication under the SC text, but blocking paste there is still reported as a Major D-04 finding | standard | [SC 3.3.8 Accessible Authentication (Minimum) (AA)](https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum) | M |
 | QG-028 | Status messages are programmatically determinable (live regions) without receiving focus | standard | [SC 4.1.3 (AA)](https://www.w3.org/TR/WCAG22/#status-messages) | AT, A (partial) |
 | QG-029 | Time limits adjustable, extendable, or off unless essential | standard | [SC 2.2.1 (A)](https://www.w3.org/TR/WCAG22/#timing-adjustable) | M |
 | QG-030 | Pinch-zoom and user scaling not disabled (`user-scalable=no`, `maximum-scale<2` absent) | standard (via SC 1.4.4 and 1.4.10) | [SC 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text); see `../sources/w3c.md` for the WCAG2Mobile note | A |
@@ -73,7 +73,7 @@ Exact WCAG wording is in the specification; links go to each success criterion. 
 | QG-050 | No horizontal page scroll or clipped content at 320, 375, 768, 1024, 1440 CSS px widths | threshold (320 is standard via QG-010) | — | A, M |
 | QG-051 | Primary navigation and primary action present and operable at every supported viewport | threshold | — | M |
 | QG-052 | Layout honors `env(safe-area-inset-*)` when `viewport-fit=cover` is used; fixed controls not under notches or home indicators | threshold | — | M (device), source inspection |
-| QG-053 | Virtual keyboard does not obscure the focused field or the submit control | threshold | — | M (device) |
+| QG-053 | With the virtual keyboard open, the focused field and its error text are visible, and the submit control is reachable by scrolling without dismissing the keyboard (it need not be visible simultaneously) | threshold | — | M (device) |
 | QG-054 | Changing window class, orientation, or device posture mid-task preserves form input, selection, open panes, and scroll position | threshold | — | M (running app) |
 
 ## Browser navigation and state

@@ -31,11 +31,11 @@ Each pattern's `related:` list and *Related* section point to the adjacent patte
 
 ## 4. Stop when the questions are answered
 
-A typical review of one screen needs 3–6 patterns, 1–3 dimension sections, and the gates table rows that match. If you are loading more than ~10 documents for one screen, you are browsing, not retrieving.
+A typical review of one screen needs 3–6 patterns, 1–3 dimension sections, and the gates table rows that match, **in addition to** the standing documents every review reads once (methods, review template, scoring). If you are loading more than ~10 patterns for one screen, you are browsing, not retrieving.
 
 ## With OpenViking
 
-The repository is ingested as a resource (see `integration/openviking.md`). Use semantic `find` scoped to the resource URI to locate candidate documents by problem description, read the **abstract** (Level 0) or **overview** (Level 1) to confirm relevance, then read the full file (Level 2) only for the 3–6 that matter. Example queries that work well: "mobile form virtual keyboard obscures submit button", "desktop data table keyboard selection", "PWA back button standalone mode".
+The repository is ingested as a Git-watched resource (see `integration/openviking.md`). Use semantic `find` scoped to the resource URI to locate candidate documents by problem description, read the **abstract** (Level 0) or **overview** (Level 1) to confirm relevance, then read the full document (Level 2) only for the 3–6 that matter. OpenViking renames files by title and may split them into section chunks; resolve IDs with `grep "id: PAT-…"` rather than by filename. Example queries that work well: "mobile form virtual keyboard obscures submit button", "desktop data table keyboard selection", "PWA back button standalone mode".
 
 ## Without OpenViking
 
@@ -43,4 +43,4 @@ Use `INDEX.md` (or `index.json` for programmatic access) to match titles and top
 
 ## Staleness check
 
-Compare the `updated:` field in the retrieved file with the current Git checkout, or compare the commit recorded in `integration/INGESTED_COMMIT` against `git rev-parse HEAD`. If they differ, the OpenViking copy may be stale; prefer the Git copy and trigger a refresh.
+Compare the `updated:` field in the retrieved file with the current Git checkout, or check the Git watch's last successful run (`ov task watch ls`) against the last commit time. If the watch is behind, the OpenViking copy may be stale; prefer the Git copy and trigger the watch (`ov task watch trigger <id>`).

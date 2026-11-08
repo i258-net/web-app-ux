@@ -40,6 +40,7 @@ Narrative: 2–5 sentences on the worst-affected primary task and the main stren
 ## 5. Findings (ordered by severity, then dimension)
 ### F-01 <short title> — <Blocker | Major | Minor | Suggestion>
 - Context: <mobile/desktop/…>; Dimension: <D-xx>; Gate: <QG-xxx or —>
+- Label: <verified | likely concern | untested>
 - **Observed:** <what was seen, where, with method and viewport/device>
 - **Inferred:** <interpretation; keep separate from observed>
 - Confidence: <high | medium | low>

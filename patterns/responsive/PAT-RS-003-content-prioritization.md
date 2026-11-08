@@ -3,7 +3,7 @@ id: PAT-RS-003
 title: Content prioritization across viewports — reorder and disclose, never remove function
 type: pattern
 scope: responsive
-topics: [content-priority, progressive-disclosure, mobile-first, feature-parity, truncation, source-order, art-direction]
+topics: [content-priority, progressive-disclosure, mobile-first, feature-parity, truncation, source-order, art-direction, visual-hierarchy, pricing, comparison]
 platforms: [mobile, tablet, desktop]
 viewports: [compact, medium, expanded, large, extra-large]
 inputs: [touch, pointer, keyboard, assistive-tech]

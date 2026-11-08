@@ -11,6 +11,28 @@
   "topics": []
  },
  {
+  "id": "EX-01-REVIEW",
+  "title": "Sample review \u2014 EX-01 Mobile sign-up form (screenshots)",
+  "type": "example-review",
+  "status": "active",
+  "path": "examples/reviews/EX-01-mobile-signup-form.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EX-08-REVIEW",
+  "title": "Sample review \u2014 EX-08 Responsive visual hierarchy of a pricing page (screenshots)",
+  "type": "example-review",
+  "status": "active",
+  "path": "examples/reviews/EX-08-responsive-pricing-hierarchy.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
   "id": "EVAL-INDEX",
   "title": "Evaluation \u2014 how to run a review",
   "type": "index",
@@ -619,7 +641,9 @@
    "see-all",
    "show-more",
    "reflow",
-   "text-size"
+   "text-size",
+   "visual-hierarchy",
+   "comparison"
   ]
  },
  {
@@ -1146,7 +1170,10 @@
    "feature-parity",
    "truncation",
    "source-order",
-   "art-direction"
+   "art-direction",
+   "visual-hierarchy",
+   "pricing",
+   "comparison"
   ]
  },
  {
@@ -1292,7 +1319,9 @@
    "zoom",
    "text-resize",
    "text-spacing",
-   "localization"
+   "localization",
+   "visual-hierarchy",
+   "line-length"
   ]
  },
  {
@@ -2229,7 +2258,8 @@
    "openviking",
    "retrieval",
    "ingestion",
-   "integration"
+   "integration",
+   "git-watch"
   ]
  },
  {

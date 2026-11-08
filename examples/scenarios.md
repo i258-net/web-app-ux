@@ -17,7 +17,7 @@ Each scenario states the material available (which determines the method), the d
 - **Task:** create an account with email, password, phone, and date of birth.
 - **Observed design:** placeholder-only labels; a numeric date field split into three inputs; error summary at the top of the page only; "Continue" button below the fold when the keyboard is open; password field blocks paste.
 - **Expected retrieval:** PAT-SH-002, PAT-SH-003, PAT-MO-004, PAT-MO-005, PAT-MO-001; P-07, P-11; D-04, D-07; QG-023, QG-022, QG-027, QG-053.
-- **Expected outcome:** Blocker candidates on paste-blocking (QG-027 likely fail, needs running app to confirm) and keyboard obscuring submit (QG-053, visible in screenshot 2); Major on placeholder labels and split date field; method limits stated (keyboard type, autofill, validation timing unverified).
+- **Expected outcome:** Blocker candidates on paste-blocking (QG-027 likely fail, needs running app to confirm) and keyboard obscuring submit (QG-053: screenshot 2 suggests it; whether the control is reachable by scrolling needs a device); Major on placeholder labels; split date-of-birth field reported with the documented tradeoff (PAT-SH-002 vs PAT-RS-010 on dates far from today); method limits stated (keyboard type, autofill, validation timing unverified).
 
 ## EX-02 Desktop settings form (running application)
 

@@ -105,8 +105,8 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 
 **Anchors:**
 1. Fields unusable with a supported input; data lost on error or navigation; validation blocks correct input.
-2. Wrong keyboards, missing labels, premature or late validation, redundant entry, unclear requirements.
-3. Labels, types, and validation present; some friction (placeholder-only labels, generic errors, extra fields).
+2. Wrong keyboards, missing or placeholder-only labels on required fields, premature or late validation, redundant entry, unclear requirements.
+3. Visible labels, correct types, and validation present; some friction (generic error wording, extra fields, labels that disappear while typing on some fields).
 4. Minimal fields; autofill and correct `inputmode`; validation on blur/submit with specific messages; progress preserved.
 5. Prefill from context, smart formatting, accessible authentication alternatives, resumable multi-step entry.
 
@@ -127,7 +127,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 - *All:* respects reduced-motion preference; dark mode, if offered, maintains contrast.
 
 **Anchors:**
-1. Illegible text, broken layouts, or primary actions visually indistinguishable at a supported viewport.
+1. Illegible text or broken layout that prevents reading or acting at a supported viewport; the primary action cannot be found without searching the screen.
 2. Flat hierarchy, cramped or overlong lines, inconsistent spacing, decorative motion that distracts.
 3. Clear enough hierarchy; readable; some inconsistency or over-dense/over-sparse regions.
 4. Deliberate hierarchy at every viewport; bounded measure; consistent type scale; purposeful motion.

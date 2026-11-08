@@ -3,7 +3,7 @@ id: PAT-RS-008
 title: Responsive typography and spacing — bounded fluid type, minimum sizes, and measure
 type: pattern
 scope: responsive
-topics: [typography, fluid-type, clamp, rem, line-length, measure, zoom, text-resize, text-spacing, localization]
+topics: [typography, fluid-type, clamp, rem, line-length, measure, zoom, text-resize, text-spacing, localization, visual-hierarchy, line-length]
 platforms: [mobile, tablet, desktop]
 viewports: [compact, medium, expanded, large, extra-large]
 inputs: [touch, pointer, keyboard, assistive-tech]

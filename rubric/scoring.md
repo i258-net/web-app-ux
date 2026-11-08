@@ -16,7 +16,7 @@ A review scores each applicable dimension (D-01 … D-10) **separately for each 
 
 | Context | What it is | When applicable |
 |---|---|---|
-| **Mobile** | Compact (and medium, if supported) viewports with touch as the primary input | Whenever the product supports phones |
+| **Mobile** | Compact (and medium, if supported) viewports **and** touch as the primary input. The context is named by the combination; with screenshots only, label it by viewport class and state that input was assumed | Whenever the product supports phones |
 | **Desktop** | Expanded or wider viewports with pointer and keyboard | Whenever the product supports laptops/desktops |
 | **Tablet / intermediate** | Medium–expanded viewports, touch primary, keyboard/pointer possible | When the product explicitly supports tablets, or when evidence shows meaningful tablet usage |
 | **Responsive transitions** | Behavior while resizing, rotating, or switching input mid-task | Always, for any multi-device product |

@@ -2,122 +2,101 @@
 id: INT-OPENVIKING
 title: OpenViking integration — ingestion, refresh, retrieval, staleness
 type: reference
-topics: [openviking, retrieval, ingestion, integration]
+topics: [openviking, retrieval, ingestion, integration, git-watch]
 status: active
 updated: 2026-11-08
 ---
 
 # OpenViking integration
 
-**Authority:** the Git repository is the single source of truth. OpenViking is a retrieval and discovery layer that holds a processed copy of the Markdown as **resources** (not memories). It never redefines guidance. If the two disagree, Git wins and the resource is refreshed.
+**Authority:** the Git repository is the single source of truth. OpenViking holds a processed copy as a **resource** (never memories) for semantic retrieval and progressive disclosure. If the two disagree, Git wins.
 
-Verified facts below are labeled **[verified]** (run against this environment on the date in `updated:`) or **[docs]** (stated in OpenViking documentation, not exercised here). Research notes with URLs are in `../research/findings/openviking.md`.
+Labels: **[verified]** = exercised against this environment on the `updated:` date; **[docs]** = stated in OpenViking documentation; **[observed]** = seen during a test ingestion. Research notes with source URLs are in `../research/findings/openviking.md`.
 
-## Environment at time of writing
+## Environment
 
 | Item | Value |
 |---|---|
-| CLI | `ov` 0.5.1 at `~/.local/bin/ov` [verified] |
-| Server | v0.5.2.1, healthy, API-key auth, user `daniel` (admin) [verified] |
-| Existing convention | Repositories ingested under `viking://resources/repos/<repo-name>` (e.g. `i258-net`) [verified] |
-| Target URI for this repository | `viking://resources/repos/web-app-ux` |
-| MCP | Claude Code plugin `openviking-memory` exposes `find`, `search`, `read`, `tree`, `glob`, `grep`, `add_resource` and others [verified: tool names]; documented MCP parameters use `target_uri` for scope (not the CLI's `-u`) [docs] |
+| CLI | `ov` 0.5.1 (`~/.local/bin/ov`) [verified] |
+| Server | v0.5.2.1, healthy, API-key auth; account `i258`, user `daniel` [verified] |
+| Existing convention | Git repositories are ingested from their **Git URL** with a recurring **Watch** task, to `viking://resources/repos/<org>/<repo>` (e.g. `https://github.com/i258-net/docs.git` → `viking://resources/repos/i258-net/docs`, interval 60 min, `semantic_and_vectors`) [verified: `ov task watch ls`] |
+| Target for this repository | `viking://resources/repos/<org>/web-app-ux` once the GitHub remote exists |
 
-## 1. Repository ingestion
+## 1. Ingestion (the intended way: Git source + Watch)
 
-Ingest the **Markdown only**, from a clean checkout (committed state), excluding `.git`, `assets`, and `scripts`. The `research/` directory is ingested too so that evidence trails are retrievable, but its documents are labeled non-authoritative in their own text.
+Prerequisite: the repository is pushed to a Git remote the OpenViking server can reach.
+
+Either in the web UI (**Scheduled Sync** → add) or with the CLI:
 
 ```sh
-# from the repository root, on a clean working tree
-ov add-resource "$(pwd)" \
-  --to viking://resources/repos/web-app-ux \
-  --include '*.md' \
-  --ignore-dirs '.git,assets,scripts,node_modules' \
+ov add-resource https://github.com/<org>/web-app-ux.git \
+  --to viking://resources/repos/<org>/web-app-ux \
+  --ignore-dirs '.git,.github,assets,scripts' \
   --tags 'repo=web-app-ux,kind=ux-knowledge' \
-  --processing-mode semantic_and_vectors --wait
+  --processing-mode semantic_and_vectors \
+  --watch-interval 60
 ```
 
-Notes:
-- `--to` must be a new URI on first ingestion [verified: CLI help]. Documentation states that re-running `add-resource` with the **same exact `--to`** refreshes in place (unchanged content reused, removed files may be removed) [docs]. See §4 for what was verified here.
-- Do **not** pass `--reason`: a non-empty reason can trigger memory extraction, and this content must stay resources-only [docs].
-- `--watch-interval` applies to re-readable remote sources (URLs, native Git URLs). A local folder upload is a static snapshot and cannot be watched [docs]. Git-URL ingestion with watching requires the Connector service (`--add-type git`), which is disabled by default server-side and was not inspected here [docs].
-- OpenViking generates **directory-level** abstracts (L0, ~256 chars) and overviews (L1, ~4000 chars) bottom-up with a model; per-file summaries feed them. The generated text is an interpretation; the L2 file is the evidence [docs].
-- Arbitrary YAML front matter is **not** documented as queryable metadata. Our `tags:`/`platforms:` front matter is retrievable only as text inside the file, not as OpenViking tags [docs]. Explicit retrieval tags are the `--tags` k=v pairs.
+- Git sources are re-readable, so the Watch re-pulls on the interval and reprocesses changes; this is the documented refresh mechanism and matches the existing `i258-net/docs` watch [docs, verified config].
+- Omit `--reason`: a non-empty reason can trigger memory extraction, and this content must stay resources-only [docs]. (The existing docs watch does carry a reason; that was a deliberate choice for that resource.)
+- Native Git ingestion works without the Connector service; `--add-type git` (Connector) is a different, server-enabled path and is not needed [docs].
+- `--ignore-dirs` keeps tooling and the PR template out. `INDEX.md` is a catalog table whose chunks rank highly for almost any query [observed]; if that proves noisy under the Git watch, exclude it via the repository's `.ovignore`-style mechanism if the server supports one, or accept it as the cost of a browsable catalog. This is an open item.
 
-## 2. Resource organization and naming
+## 2. How OpenViking represents the files
 
-The ingested tree mirrors the repository: `viking://resources/repos/web-app-ux/{principles,patterns/{shared,mobile,desktop,responsive,pwa},rubric,evaluation,sources,examples,governance,integration,research}`. The directory structure therefore *is* the progressive-disclosure structure: the `patterns/mobile` L0 abstract answers "is this where mobile guidance lives?", its L1 overview lists the files, and L2 is the pattern.
+[observed during a test ingestion of a local snapshot; expected to be the same for Git sources since the same Markdown parser runs]
 
-Do not create a second copy under another URI (e.g. a user-private path). One resource, one URI.
+- The scanner honors `.gitignore`.
+- Each Markdown file becomes a **directory named after its H1 title** (sanitized, truncated, hash-suffixed), with the content **split into section chunks** (a pattern became three files). Original filenames are not preserved, so `glob` by filename or ID does not work.
+- YAML front matter is preserved verbatim in the first chunk, so `ov grep "id: PAT-MO-004"` resolves an ID to its URI in one call [verified].
+- Directory-level abstracts (L0) and overviews (L1) are generated asynchronously by a model; the chunk files are L2.
+- `--args parse_mode:no_split` is documented to disable section splitting and keep one file per document [docs]; it was **not** exercised. It is worth enabling on the Git watch if whole-pattern reads matter more than fine-grained hits.
 
-## 3. Indexing and retrieval
+## 3. Retrieval
 
-| Need | Command (CLI) | MCP tool |
+| Need | CLI | MCP tool |
 |---|---|---|
-| Find candidate documents by problem | `ov find "<problem>" -u viking://resources/repos/web-app-ux --context-type resource -n 8 -o json` | `find(query, target_uri=…, context_type="resource", limit=8)` |
-| Confirm a directory is relevant | `ov abstract <dir-uri>` / `ov overview <dir-uri>` | `read(uri="<dir-uri>/.abstract.md")`, `read(uri="<dir-uri>/.overview.md")` |
-| Read a pattern | `ov read <file-uri>` | `read(uri=…)` or `read(uris=[…])` for several |
-| Exact term / ID lookup | `ov grep "PAT-MO-004" -u viking://resources/repos/web-app-ux` | `grep` |
-| Path lookup | `ov glob "**/PAT-SH-*.md" -u viking://resources/repos/web-app-ux` | `glob` |
+| Candidates by problem | `ov find "<problem>" -u <resource> --context-type resource -n 8 -o json` | `find(query, target_uri=…, context_type="resource", limit=8)` |
+| Confirm a directory | `ov abstract <dir>` / `ov overview <dir>` | `read(uri="<dir>/.abstract.md")` |
+| Resolve an ID | `ov grep "id: PAT-SH-003" -u <resource>` | `grep` |
+| Read | `ov read <uri>` (all chunks in the pattern's directory) | `read(uris=[…])` |
 
-Retrieval recipe used by the review skill:
+`find -o json` returns `{ok, result:{resources:[{uri, level, score, abstract, tags, context_type}], …}}`; the CLI prints a `cmd:` line before the JSON [verified].
 
-1. `find` with a problem phrased in user terms, scoped to the resource, limited to ~8 results, resource type only.
-2. For the top hits that are directories, read the L0/L1 sidecar to confirm; for file hits, read the file.
-3. Follow `related:` IDs by `grep`/`glob` rather than issuing new semantic searches.
-4. Stop at 3–6 documents per screen under review.
+Recipe: `find` scoped to the resource → read L0/L1 for directory hits → `grep` to resolve `related:` IDs → read the 3–6 documents that matter.
 
-`find -o json` returns `{ok, result:{memories:[], resources:[{uri, level, score, abstract, tags, context_type}], skills:[], total}}` [verified]. The CLI prints a human `cmd:` line before JSON on stdout; automation must skip non-JSON lines [verified].
+## 4. Refresh after Git changes
 
-## 4. Refreshing after Git changes
+With a Git Watch: **nothing to do** beyond merging to the watched branch. The next scheduled run pulls and reprocesses. To refresh immediately: `ov task watch trigger <watch-task-id>` [verified: command exists]. Check `ov task watch ls` for `last_status`, `last_error`, `next_execution_time`.
 
-Procedure (run after merging to `main`):
-
-```sh
-git -C <repo> pull --ff-only
-git -C <repo> rev-parse HEAD > integration/INGESTED_COMMIT        # record what is about to be ingested (not committed to Git; see note)
-ov add-resource "<repo>" --to viking://resources/repos/web-app-ux \
-  --include '*.md' --ignore-dirs '.git,assets,scripts,node_modules' \
-  --tags 'repo=web-app-ux,kind=ux-knowledge' --processing-mode semantic_and_vectors --wait
-ov task status <TASK_ID>         # if --wait returned early
-ov tree viking://resources/repos/web-app-ux -L 2
-```
-
-- **Preferred:** in-place refresh with identical `--to` [docs]. Status in this environment: see "Verification log" below.
-- **Fallback (deliberate, destructive):** `ov rm viking://resources/repos/web-app-ux --recursive --wait` then re-add. This creates a retrieval gap and regenerates all summaries and vectors; use only if in-place refresh is rejected.
-- `ov reindex` rebuilds semantic artifacts for content already stored; it does not pick up Git changes [verified: CLI help].
-- There is no generic `sync` command [verified: CLI help]. The `--manifest` option (OpenViking Assets manifest) can create or sync selected assets and is a candidate for a future scripted refresh, but it was not exercised.
-
-**No custom synchronization service is introduced.** The refresh is one command run after merges; a Git hook or CI job that runs it is optional and out of scope.
+`ov reindex` rebuilds semantic artifacts for stored content and does not fetch Git changes [verified: help].
 
 ## 5. Staleness detection
 
-OpenViking exposes `modTime` and an `id` that is an MD5 of account+URI (not a content hash); neither proves equality with Git HEAD [verified].
-
-Mechanism used here: the file `integration/INGESTED_COMMIT` is written by the refresh procedure **immediately before ingestion** and ingested with the tree (it is listed in `.gitignore`, because a committed file cannot contain its own commit SHA). A consumer compares:
-
-```sh
-ov read viking://resources/repos/web-app-ux/integration/INGESTED_COMMIT
-git -C <repo> rev-parse HEAD
-```
-
-If they differ, the OpenViking copy is stale: prefer the Git copy and run the refresh. Every authoritative file also carries `updated:` in its front matter, which is visible in L2 reads and is a per-document secondary signal.
+- **Primary:** `ov task watch ls -o json` → compare `last_execution_time` with the time of the last merge; `last_status` must be `completed` with `last_error` null.
+- **Per document:** every authoritative file carries `updated:` in its front matter, visible in L2 reads.
+- OpenViking's `stat.id` is an MD5 of account+URI, not a content hash; `modTime` alone does not prove equality with Git HEAD [verified].
 
 ## 6. Avoiding stale or duplicate content
 
-- One target URI; never ingest the same repository under two URIs.
-- Ingest from a clean checkout only (`git status --porcelain` empty), so no untracked drafts enter.
-- `--include '*.md'` keeps SVGs, scripts, and JSON (`index.json`) out of the semantic index. `INDEX.md` is included deliberately as a catalog.
-- Deprecated patterns stay in Git (status `deprecated`) so retrieval shows the pointer to the successor rather than a dangling result.
-- Do not store UX guidance as OpenViking **memories**; the memory plugin's automatic capture is unrelated to this resource, and nothing in the skill writes memories.
+- One resource URI per repository. Do not also ingest a local folder copy.
+- Deprecated patterns stay in Git with `status: deprecated` so retrieval returns the pointer, not a dangling result.
+- No UX guidance is stored as OpenViking memories; the skill never writes memories.
 
 ## 7. Retrieval validation
 
-Representative queries and expected top documents are listed in `../examples/retrieval-tests.md`. Run them after every refresh; a query whose expected document falls out of the top results indicates either a regression in content or a stale index.
+`scripts/retrieval_test.py --resource <uri>` runs the 16 queries in `../examples/retrieval-tests.md` and resolves hits to IDs via `grep`. Run after the watch's first completed run and after significant content changes. Log results in that file.
 
 ## Verification log
 
 | Date | What was done | Result |
 |---|---|---|
-| 2026-11-08 | CLI inventory, health, existing convention, `find -o json` shape, `stat`/`attrs` fields | Verified as described above |
-| 2026-11-08 | Initial ingestion and retrieval tests | *pending — see below; this row is replaced when executed* |
+| 2026-11-08 | CLI inventory, health, `find -o json` shape, `stat`/`attrs` fields, existing Git watch config | Verified as described |
+| 2026-11-08 | **Test ingestion of a local folder snapshot** to `viking://resources/repos/web-app-ux` (not the intended Git-watch path; done before confirming the owner's convention) | 121 files uploaded, 0 failures; parser split and renamed files as described in §2; semantic processing of `patterns/` still running at last check; retrieval tests 1/16 while abstracts were "not ready". **This snapshot should be removed and replaced by the Git watch once the remote exists.** |
+| — | Git-watch ingestion of this repository | Not yet performed (remote not connected) |
+| — | `parse_mode:no_split` | Not exercised |
+| — | Retrieval tests against the Git-watched resource | Not yet performed |
+
+## Fallback: local snapshot (testing only)
+
+`scripts/ov_refresh.sh` ingests `git archive HEAD` from a staging folder to a given `--to` URI. It exists for environments without a reachable Git remote. A local snapshot cannot be watched and must be re-run manually after every change; do not use it alongside a Git watch on the same URI.
