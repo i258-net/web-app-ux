@@ -4,8 +4,8 @@ title: Keyboard navigation, tab order, roving tabindex, skip links, and shortcut
 type: pattern
 scope: desktop
 topics: [keyboard, tab-order, roving-tabindex, skip-link, shortcuts, accelerators, discoverability, conflicts, wcag-2.1.4]
-platforms: [desktop, tablet]
-viewports: [medium, expanded, large, extra-large]
+platforms: [desktop, tablet, mobile]
+viewports: [compact, medium, expanded, large, extra-large]
 inputs: [keyboard, pointer, assistive-tech]
 principles: [P-12, P-07, P-02, P-09]
 dimensions: [D-08, D-03, D-01]
@@ -19,6 +19,8 @@ updated: 2026-11-08
 # Keyboard navigation, tab order, roving tabindex, skip links, and shortcuts
 
 ## Problem
+
+> Baseline keyboard operability applies at every viewport, including phones with external keyboards (PAT-RS-009); this pattern lives under `desktop/` because accelerators and dense keyboard workflows are most valuable there.
 
 Keyboard operation is two things at once. It is a baseline accessibility requirement for people who cannot use a pointer, and it is the main speed tool for expert desktop users, including iPad users with a hardware keyboard. Products fail at both ends. Custom widgets can't be reached or escaped, every row in a 200-row table is its own Tab stop, focus is invisible, and the sidebar repeats on every page. At the other end, single-letter shortcuts fire while someone is dictating into a comment field, shortcuts take over browser or screen-reader keys, or shortcuts exist that nobody can find.
 

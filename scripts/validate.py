@@ -20,7 +20,7 @@ SKIP_DIRS = {".git", "assets", "scripts", "research", ".github", "node_modules"}
 REQUIRED_FM = ["id", "title", "type", "status", "updated"]
 PATTERN_SECTIONS = ["Problem", "Recommendation", "Evidence", "Alternatives and tradeoffs",
                     "Exceptions and failure modes", "Evaluation questions", "Related"]
-GATE_RE = re.compile(r"^\| (QG-\d{3}) \|", re.M)
+GATE_RE = re.compile(r"^\| (QG-\d{3}[a-z]?) \|", re.M)
 DIM_RE = re.compile(r"^## (D-\d{2}) ", re.M)
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 URL_RE = re.compile(r"https?://[^\s)\]>\"'`]+")

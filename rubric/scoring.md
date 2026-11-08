@@ -38,7 +38,7 @@ A dimension with low confidence can still be scored, but the report must say the
 
 ## 3. Findings and severity
 
-Each finding is a discrete observation tied to a dimension, a context, and, where possible, a pattern or gate. Severity is assigned on impact, frequency, and persistence (adapted from the widely used NN/g severity rating logic; see `../sources/nngroup.md`):
+Each finding is a discrete observation tied to a dimension, a context, and, where possible, a pattern or gate. Severity is assigned on impact, frequency, and persistence (adapted from the widely used NN/g severity rating logic; see [`../sources/SRC-002-nngroup.md`](../sources/SRC-002-nngroup.md)):
 
 | Severity | Definition |
 |---|---|
@@ -62,7 +62,7 @@ Blocking conditions are reported at the top of the review. A strong desktop resu
 
 ## 5. Overall cross-device task-effectiveness judgment
 
-After per-context results, the review states one qualitative judgment on whether the product's primary tasks are achievable and efficient **across all supported devices**: `pass`, `pass with major issues`, or `fail`. It is derived from D-01 and D-10 across contexts plus the blocking conditions, and it is explained in prose. It is not a number.
+After per-context results, the review states one qualitative judgment on whether the product's primary tasks are achievable and efficient **across all supported devices**: `pass`, `pass with major issues`, `fail`, or `insufficient evidence` (when a supported device context was not evaluated, or the method cannot establish task completion, as with screenshot-only reviews). With `insufficient evidence`, give a scoped result for the contexts that were evaluated and name what is missing. The judgment is derived from D-01 and D-10 across contexts plus the blocking conditions, and it is explained in prose. It is not a number.
 
 ## 6. Provisional weights
 

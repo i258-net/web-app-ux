@@ -35,7 +35,7 @@ Whether to use a gesture at all, and how to make it discoverable, is PAT-MO-006.
 
 **Resolve conflicts with scrolling and the browser**
 
-3. **Constrain axes.** A horizontally swipeable row in a vertical list should claim only horizontal movement: `touch-action: pan-y` on the row lets the browser keep vertical scrolling and pinch-zoom. Commit to the gesture only after movement clearly favours one axis.
+3. **Constrain axes.** A horizontally swipeable row in a vertical list should claim only horizontal movement: `touch-action: pan-y pinch-zoom` on the row lets the browser keep vertical scrolling and pinch-zoom (`pan-y` alone also disables pinch; ancestors' `touch-action` can further restrict). Verify zoom still works on the supported browsers. Commit to the gesture only after movement clearly favours one axis.
 4. **Use a drag handle for reordering on touch.** Starting a drag from a dedicated handle (≥ 44 px, PAT-MO-001) or after a long-press leaves the rest of the row free to scroll. Auto-scroll the list when an item is dragged near its edge.
 5. **Never use `touch-action: none` on large areas** or the whole page; it can block browser zoom (QG-030). Scope it to the handle or canvas that needs it.
 6. **Keep away from screen edges** for custom swipes; edges are where browsers and OSs put back and app-switch gestures.
@@ -46,7 +46,7 @@ Whether to use a gesture at all, and how to make it discoverable, is PAT-MO-006.
 
 9. **Show progress and the pending action** during the gesture (the row slides, the action label and colour appear, the item lifts) and **commit on release past a threshold**; releasing early cancels (2.5.2).
 10. **Use undo, not confirmation,** for recoverable destructive swipes (PAT-SH-011), and avoid full-swipe-to-delete without undo.
-11. **Keep gesture handling cheap** so responses stay within interaction-latency targets (QG-081). Animating transforms rather than layout properties is our implementation note, not a finding from the sources below.
+11. **Keep gesture handling cheap** so the first response to a touch stays within discrete-interaction latency targets (QG-081 covers taps, not continuous drag tracking; judge continuous tracking by device observation and frame/main-thread traces). Animating transforms rather than layout properties is our implementation note, not a finding from the sources below.
 
 Hybrid devices: touch laptops and tablets with trackpads use the same UI with mouse and touch; handle both input types in one implementation and test both (PAT-RS-009).
 

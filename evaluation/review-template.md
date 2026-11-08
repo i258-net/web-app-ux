@@ -35,7 +35,7 @@ For each context evaluated:
 Narrative: 2–5 sentences on the worst-affected primary task and the main strengths.
 
 ## 4. Overall cross-device task effectiveness
-<pass | pass with major issues | fail> — <explanation referencing D-01 and D-10 across contexts>
+<pass | pass with major issues | fail | insufficient evidence> — <explanation referencing D-01 and D-10 across contexts; with insufficient evidence, give the scoped result for evaluated contexts and name the missing context or method>
 
 ## 5. Findings (ordered by severity, then dimension)
 ### F-01 <short title> — <Blocker | Major | Minor | Suggestion>

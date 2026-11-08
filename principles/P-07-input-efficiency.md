@@ -46,4 +46,4 @@ Users provide information with the least effort and the fewest errors: the syste
 
 ## Evaluation
 
-Primary dimension D-04; gates QG-023, QG-026, QG-027. Keyboard types and autofill are verifiable in a running app or by source inspection, not from screenshots.
+Primary dimension D-04; gates QG-023, QG-026, QG-027. Source inspection verifies that `type`, `inputmode`, and `autocomplete` hints are declared; only a running device verifies the keyboard and autofill behavior the browser actually delivers. Neither is visible in screenshots.

@@ -23,7 +23,7 @@ Translate what you are looking at into a problem, not a component. "Hamburger me
 | How to judge it | `rubric/dimensions.md` → the one `## D-xx` section you need |
 | Whether it is a hard requirement | `rubric/quality-gates.md` → the relevant `QG-xxx` rows |
 | Whether the method can prove it | `evaluation/methods.md` |
-| How strong the evidence is | the pattern's *Evidence* section → `sources/<publisher>.md` |
+| How strong the evidence is | the pattern's *Evidence* section → `sources/SRC-0xx-<publisher>.md` (index in `sources/README.md`) |
 
 ## 3. Follow references, don't browse
 

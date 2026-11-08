@@ -9,7 +9,7 @@ viewports: [compact, medium, expanded, large, extra-large]
 inputs: [touch, pointer, keyboard, assistive-tech]
 principles: [P-04, P-07, P-02, P-14]
 dimensions: [D-02, D-04, D-07]
-gates: [QG-001, QG-028, QG-061, QG-020]
+gates: [QG-001, QG-028, QG-061, QG-020b]
 related: [PAT-SH-005, PAT-SH-012, PAT-SH-001, PAT-MO-004, PAT-RS-010, PAT-PW-003]
 evidence_strength: moderate
 status: active
@@ -43,7 +43,7 @@ Search is the fallback when navigation fails, and many users go to it first. It 
    - Keep the list short: Baymard recommends no more than 10 on desktop and 4–8 on mobile (e-commerce research).
    - Show recent queries when the field is focused and empty, with a way to clear history.
    - Implement the suggestion list as a combobox: Down Arrow enters the list, Escape closes it, Enter accepts, and standard text-editing keys keep working.
-   - Selecting a suggestion must not cause an unexpected change of context (QG-020). Selecting a destination suggestion may navigate if the suggestion is clearly a link to that destination.
+   - Selecting a suggestion must not cause an unexpected change of context (QG-020b). Selecting a destination suggestion may navigate if the suggestion is clearly a link to that destination.
 4. **Results.**
    - Echo the query in an editable field.
    - Show the result count and announce it to assistive technology (QG-028).
@@ -107,7 +107,7 @@ Search keyboards: PAT-MO-004. Full-screen vs docked presentation: PAT-RS-010.
 
 - Principles: P-04, P-07, P-02, P-14
 - Dimensions: D-02, D-04, D-07
-- Gates: QG-001, QG-028, QG-061, QG-020
+- Gates: QG-001, QG-028, QG-061, QG-020b
 - Patterns: PAT-SH-005 (refining results), PAT-SH-012 (no-results state), PAT-SH-001 (navigation), PAT-MO-004 (search keyboards), PAT-RS-010 (modality variants), PAT-PW-003 (URL state)
 
 ## Change log

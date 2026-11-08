@@ -75,7 +75,7 @@ Field count, labels, and validation messages are universal form concerns: see PA
 
 - Does each field declare an appropriate `type`/`inputmode`, `enterkeyhint`, and `autocomplete` token? [automated] [running app]
 - Does the keyboard shown on a real device match the data for every field? [running app]
-- With the keyboard open, are the focused field, its error, and the submit control visible in portrait and landscape? [running app]
+- With the keyboard open, are the focused field and its error text visible in portrait and landscape? [running app] Is the submit control reachable by scrolling without dismissing the keyboard (it need not be visible at the same time; QG-053)? [running app]
 - Is paste and password-manager fill permitted in credential fields? [running app]
 - Are names and addresses left uncorrupted by autocorrect? [running app] [user study]
 - Do sticky bars obscure focused fields? [running app]

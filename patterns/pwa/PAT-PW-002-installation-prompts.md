@@ -49,7 +49,7 @@ Teams want people to install the app, so they show an "Install app" banner the m
 - **No custom promotion.** Leave installation to the browser's own UI. This is the least intrusive option and right for occasional-use sites. Users who would benefit may never find it.
 - **Contextual promotion vs a settings entry.** A contextual invitation after a success converts better in principle, but no fetched source measures this (E4 reasoning). A settings entry is always available but rarely seen. Use both.
 - **Promoting install to unlock a capability.** On iOS, web push requires a Home Screen app, so an install invitation can legitimately sit inside the "turn on notifications" flow (PAT-PW-009). Explain both steps.
-- **Conflict with QG-090.** QG-090 requires "a registered service worker". MDN says a service worker is not required for installability. We read QG-090 as a quality bar for this knowledge base, not as the browser's criterion. A correction has been proposed in `research/PATTERN-PLAN.md`.
+- **Installability versus offline.** QG-090 follows MDN: a service worker is not required for installability; offline behavior is gated separately (QG-093) and only for products that claim it. QG-090's manifest list is illustrative; the authoritative checklist is each target browser's criteria (MDN, Making PWAs installable), including Chromium's `prefer_related_applications` and icon-size conditions and permitted development origins.
 
 ## Exceptions and failure modes
 

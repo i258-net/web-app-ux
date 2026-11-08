@@ -9,7 +9,7 @@ viewports: [compact, medium, expanded, large, extra-large]
 inputs: [keyboard, pointer, touch, assistive-tech]
 principles: [P-12, P-10, P-04, P-05]
 dimensions: [D-08, D-07, D-03]
-gates: [QG-001, QG-002, QG-004, QG-005, QG-006, QG-020, QG-028]
+gates: [QG-001, QG-002, QG-004, QG-005, QG-006, QG-020a, QG-020b, QG-028]
 related: [PAT-DT-004, PAT-DT-006, PAT-DT-007, PAT-DT-011, PAT-SH-006, PAT-SH-011, PAT-SH-015]
 evidence_strength: moderate
 status: active
@@ -33,7 +33,7 @@ In dynamic apps, the element that has focus keeps disappearing. A dialog closes,
 3. **Deleting the focused item moves focus to a defined neighbor.** Choose the next item, else the previous item, else the list's empty-state action or heading. Define this before building the delete. The same applies to removing a row with an optimistic update and then rolling it back (PAT-DT-006).
 4. **Re-rendering preserves focus** on the same logical item when it still exists, after filtering, sorting, pagination, or a live update. Do not let a background refresh steal focus.
 5. **Do not move focus just to announce status.** Use live regions for "Saved" or "3 items deleted" (QG-028). Move focus only when the user's next task is at the new location.
-6. **Focus must not trigger a context change** (QG-020). Arrowing through a list may update a preview pane only if that is fast and doesn't navigate the page.
+6. **Focus must not trigger a context change** (QG-020a). Arrowing through a list may update a preview pane only if that is fast and doesn't navigate the page.
 
 ### Selection models
 
@@ -85,7 +85,7 @@ WCAG does not specify *where* focus goes after deletion. That guidance is E3 con
 
 - Patterns: [PAT-DT-004](PAT-DT-004-keyboard-navigation-shortcuts.md), [PAT-DT-006](PAT-DT-006-inline-editing.md), [PAT-DT-007](PAT-DT-007-data-tables-grids.md), [PAT-DT-011](PAT-DT-011-expert-workflows.md), PAT-SH-006, PAT-SH-011, PAT-SH-015
 - Principles: [P-12](../../principles/P-12-accessibility-inclusion.md), [P-10](../../principles/P-10-feedback-predictability.md), [P-04](../../principles/P-04-navigation-orientation.md), [P-05](../../principles/P-05-cognitive-clarity.md)
-- Rubric: [D-08, D-07, D-03](../../rubric/dimensions.md); gates [QG-001, QG-002, QG-004, QG-005, QG-006, QG-020, QG-028](../../rubric/quality-gates.md)
+- Rubric: [D-08, D-07, D-03](../../rubric/dimensions.md); gates [QG-001, QG-002, QG-004, QG-005, QG-006, QG-020a, QG-028](../../rubric/quality-gates.md)
 
 ## Change log
 

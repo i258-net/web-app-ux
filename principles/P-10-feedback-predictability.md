@@ -43,4 +43,4 @@ Every user action produces an immediate, proportionate, and understandable respo
 
 ## Evaluation
 
-Primary dimension D-07; gates QG-020, QG-028, QG-070. Only a running app shows timing and state behavior.
+Primary dimension D-07; gates QG-020a, QG-020b, QG-028, QG-070. Only a running app shows timing and state behavior.
