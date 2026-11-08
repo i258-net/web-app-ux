@@ -41,7 +41,7 @@ The eye lands first on what matters most and reads comfortably from there. Impor
 - W3C WCAG 2.2 SC 1.4.3, 1.4.4, 1.4.11, 1.4.12. https://www.w3.org/TR/WCAG22/#contrast-minimum — E1.
 - Butterick, M. *Practical Typography*, "Line length." https://practicaltypography.com/line-length.html — E4.
 - web.dev, Learn Responsive Design: Typography (course guidance). https://web.dev/learn/design/typography — E4.
-- Baymard Institute, "Readability: The Optimal Line Length". https://baymard.com/research-articles/readability-the-optimal-line-length — E2; e-commerce context.
+- Baymard Institute, "Readability: The Optimal Line Length". https://baymard.com/research-articles/line-length-readability — E2; e-commerce context.
 
 ## Evaluation
 
