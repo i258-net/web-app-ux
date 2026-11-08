@@ -1,0 +1,2404 @@
+[
+ {
+  "id": "ADR-001",
+  "title": "Knowledge architecture, identifiers, and evidence scale",
+  "type": "decision",
+  "status": "accepted",
+  "path": "governance/decisions/ADR-001-knowledge-architecture.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EVAL-INDEX",
+  "title": "Evaluation \u2014 how to run a review",
+  "type": "index",
+  "status": "active",
+  "path": "evaluation/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EX-INDEX",
+  "title": "Examples \u2014 scenarios, retrieval tests, and sample reviews",
+  "type": "index",
+  "status": "active",
+  "path": "examples/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-INDEX",
+  "title": "Governance and maintenance",
+  "type": "index",
+  "status": "active",
+  "path": "governance/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "P-INDEX",
+  "title": "Foundational UX principles",
+  "type": "index",
+  "status": "active",
+  "path": "principles/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "PAT-INDEX",
+  "title": "Pattern library \u2014 how patterns are organized and written",
+  "type": "index",
+  "status": "active",
+  "path": "patterns/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "RUBRIC-INDEX",
+  "title": "Evaluation rubric \u2014 overview",
+  "type": "index",
+  "status": "active",
+  "path": "rubric/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-INDEX",
+  "title": "Source register",
+  "type": "index",
+  "status": "active",
+  "path": "sources/README.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "PAT-DT-001",
+  "title": "Wide layouts \u2014 readable measure, purposeful columns, and task-appropriate density",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-001-wide-layout-density.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "layout",
+   "line-length",
+   "measure",
+   "max-width",
+   "multi-column",
+   "whitespace",
+   "density",
+   "expert-users"
+  ]
+ },
+ {
+  "id": "PAT-DT-002",
+  "title": "Sidebars and hierarchical navigation on wide windows",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-002-sidebar-hierarchical-navigation.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "navigation",
+   "sidebar",
+   "left-nav",
+   "top-nav",
+   "mega-menu",
+   "collapsible",
+   "hierarchy",
+   "breadcrumbs",
+   "skip-link"
+  ]
+ },
+ {
+  "id": "PAT-DT-003",
+  "title": "Hover affordances, hover-revealed actions, tooltips, and cursors",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-003-hover-tooltips.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "hover",
+   "tooltips",
+   "cursor",
+   "affordance",
+   "hover-reveal",
+   "popover",
+   "mega-menu",
+   "wcag-1.4.13"
+  ]
+ },
+ {
+  "id": "PAT-DT-004",
+  "title": "Keyboard navigation, tab order, roving tabindex, skip links, and shortcuts",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-004-keyboard-navigation-shortcuts.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "keyboard",
+   "pointer",
+   "assistive-tech"
+  ],
+  "topics": [
+   "keyboard",
+   "tab-order",
+   "roving-tabindex",
+   "skip-link",
+   "shortcuts",
+   "accelerators",
+   "discoverability",
+   "conflicts",
+   "wcag-2.1.4"
+  ]
+ },
+ {
+  "id": "PAT-DT-005",
+  "title": "Focus management and selection models",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-005-focus-selection-management.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet",
+   "mobile"
+  ],
+  "inputs": [
+   "keyboard",
+   "pointer",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "focus-management",
+   "focus-restoration",
+   "selection",
+   "multi-select",
+   "keyboard-selection",
+   "dialogs",
+   "deletion",
+   "aria-selected"
+  ]
+ },
+ {
+  "id": "PAT-DT-006",
+  "title": "Inline editing \u2014 edit-in-place, save and cancel semantics, autosave, optimistic updates",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-006-inline-editing.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet",
+   "mobile"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "inline-edit",
+   "edit-in-place",
+   "autosave",
+   "save-cancel",
+   "blur",
+   "optimistic-ui",
+   "rollback",
+   "layout-shift"
+  ]
+ },
+ {
+  "id": "PAT-DT-007",
+  "title": "Data tables and grids \u2014 sorting, sticky headers, selection, columns, and responsive strategies",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-007-data-tables-grids.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet",
+   "mobile"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "data-table",
+   "grid",
+   "sorting",
+   "sticky-header",
+   "frozen-column",
+   "row-selection",
+   "column-management",
+   "responsive-table",
+   "horizontal-scroll",
+   "card-stacking",
+   "pagination"
+  ]
+ },
+ {
+  "id": "PAT-DT-008",
+  "title": "Contextual actions \u2014 right-click menus, row hover actions, and toolbars with touch and keyboard parity",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-008-contextual-actions-menus.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet",
+   "mobile"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "context-menu",
+   "right-click",
+   "row-actions",
+   "toolbar",
+   "overflow-menu",
+   "long-press",
+   "menu-button",
+   "input-parity"
+  ]
+ },
+ {
+  "id": "PAT-DT-009",
+  "title": "Accessible drag-and-drop \u2014 single-pointer and keyboard alternatives (WCAG 2.5.7)",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-009-drag-and-drop-accessible.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet",
+   "mobile"
+  ],
+  "inputs": [
+   "pointer",
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "drag-and-drop",
+   "reorder",
+   "move",
+   "resize",
+   "kanban",
+   "wcag-2.5.7",
+   "single-pointer",
+   "keyboard-alternative",
+   "cursor",
+   "drop-target"
+  ]
+ },
+ {
+  "id": "PAT-DT-010",
+  "title": "Narrow desktop windows, side-by-side use, multiple tabs, and iPad multitasking",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-010-multi-window-resize.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "pointer",
+   "keyboard",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "window-resize",
+   "narrow-window",
+   "split-view",
+   "side-by-side",
+   "multitasking",
+   "stage-manager",
+   "multiple-tabs",
+   "deep-links",
+   "state-preservation",
+   "zoom"
+  ]
+ },
+ {
+  "id": "PAT-DT-011",
+  "title": "Expert workflows \u2014 bulk operations, command palettes, defaults, recents, and undo over confirm",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/desktop/PAT-DT-011-expert-workflows.md",
+  "scope": "desktop",
+  "platforms": [
+   "desktop",
+   "tablet"
+  ],
+  "inputs": [
+   "keyboard",
+   "pointer",
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "expert-users",
+   "power-users",
+   "bulk-actions",
+   "command-palette",
+   "defaults",
+   "recents",
+   "working-set",
+   "preferences",
+   "undo",
+   "confirmation"
+  ]
+ },
+ {
+  "id": "PAT-MO-001",
+  "title": "Touch target size and spacing",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-001-touch-target-size-spacing.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "touch-targets",
+   "target-size",
+   "spacing",
+   "hit-area",
+   "ergonomics",
+   "accessibility"
+  ]
+ },
+ {
+  "id": "PAT-MO-002",
+  "title": "Thumb reach and primary-action placement on compact touch screens",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-002-thumb-reach-primary-action.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "assistive-tech"
+  ],
+  "topics": [
+   "reachability",
+   "thumb-zone",
+   "one-handed",
+   "primary-action",
+   "fab",
+   "ergonomics",
+   "grips",
+   "handedness"
+  ]
+ },
+ {
+  "id": "PAT-MO-003",
+  "title": "Bottom tab bar vs top bar vs navigation drawer on compact screens",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-003-bottom-vs-top-navigation.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "navigation",
+   "tab-bar",
+   "bottom-navigation",
+   "hamburger",
+   "drawer",
+   "top-app-bar",
+   "labels"
+  ]
+ },
+ {
+  "id": "PAT-MO-004",
+  "title": "Virtual keyboards, input types, and keyboard-aware layout",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-004-virtual-keyboards-input-types.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "virtual-keyboard",
+   "inputmode",
+   "enterkeyhint",
+   "autocomplete",
+   "input-type",
+   "autocorrect",
+   "keyboard-occlusion",
+   "forms"
+  ]
+ },
+ {
+  "id": "PAT-MO-005",
+  "title": "Mobile form optimization \u2014 layout, steps, autofill, and minimal typing",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-005-mobile-form-optimization.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "forms",
+   "checkout",
+   "address",
+   "payment",
+   "autofill",
+   "single-column",
+   "steps",
+   "typing-effort",
+   "labels"
+  ]
+ },
+ {
+  "id": "PAT-MO-006",
+  "title": "Gesture discoverability and redundancy with visible controls",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-006-gesture-discoverability.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "gestures",
+   "discoverability",
+   "hidden-interactions",
+   "accelerators",
+   "onboarding",
+   "coach-marks",
+   "motion"
+  ]
+ },
+ {
+  "id": "PAT-MO-007",
+  "title": "Swipe actions, swipe-to-dismiss, and drag reordering on touch",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-007-swipe-and-drag-on-touch.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "swipe",
+   "drag",
+   "reorder",
+   "dismiss",
+   "touch-action",
+   "scroll-conflict",
+   "browser-gestures",
+   "overscroll"
+  ]
+ },
+ {
+  "id": "PAT-MO-008",
+  "title": "Compact density, truncation, line clamping, and horizontal carousels",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-008-compact-density-truncation.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "density",
+   "truncation",
+   "line-clamp",
+   "ellipsis",
+   "carousel",
+   "see-all",
+   "show-more",
+   "reflow",
+   "text-size"
+  ]
+ },
+ {
+  "id": "PAT-MO-009",
+  "title": "Safe-area insets, dynamic viewport units, and collapsing browser chrome",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-009-safe-areas-viewport.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "safe-area",
+   "notch",
+   "home-indicator",
+   "viewport-units",
+   "dvh",
+   "svh",
+   "lvh",
+   "viewport-fit",
+   "browser-chrome",
+   "zoom",
+   "orientation"
+  ]
+ },
+ {
+  "id": "PAT-MO-010",
+  "title": "Scrolling, sticky headers and action bars, and pull-to-refresh",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-010-scrolling-sticky-controls.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "scrolling",
+   "sticky-header",
+   "sticky-footer",
+   "action-bar",
+   "hide-on-scroll",
+   "pull-to-refresh",
+   "scroll-jank",
+   "overscroll",
+   "scroll-restoration"
+  ]
+ },
+ {
+  "id": "PAT-MO-011",
+  "title": "Bottom sheets, action sheets, and full-screen dialogs on compact screens",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/mobile/PAT-MO-011-bottom-sheets-mobile-modality.md",
+  "scope": "mobile",
+  "platforms": [
+   "mobile",
+   "tablet"
+  ],
+  "inputs": [
+   "touch",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "bottom-sheet",
+   "action-sheet",
+   "full-screen-dialog",
+   "modality",
+   "detents",
+   "scrim",
+   "dismissal",
+   "back-button",
+   "focus"
+  ]
+ },
+ {
+  "id": "PAT-PW-001",
+  "title": "Browser tab vs installed app \u2014 display modes and lost browser chrome",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-001-browser-vs-installed.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "pwa",
+   "display-mode",
+   "standalone",
+   "installed",
+   "browser-chrome",
+   "back-navigation",
+   "urls",
+   "sharing",
+   "manifest"
+  ]
+ },
+ {
+  "id": "PAT-PW-002",
+  "title": "Installation prompts \u2014 criteria, timing, and platform-specific install paths",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-002-installation-prompts.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "pwa",
+   "install",
+   "beforeinstallprompt",
+   "add-to-home-screen",
+   "ios",
+   "manifest",
+   "onboarding",
+   "promotion"
+  ]
+ },
+ {
+  "id": "PAT-PW-003",
+  "title": "History, Back, and deep links in client-routed apps",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-003-history-back-deep-links.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "history",
+   "back-button",
+   "deep-links",
+   "urls",
+   "routing",
+   "navigation-api",
+   "overlays",
+   "modals",
+   "standalone"
+  ]
+ },
+ {
+  "id": "PAT-PW-004",
+  "title": "Reload, back/forward cache, and restoring in-progress state",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-004-reload-session-restoration.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "reload",
+   "bfcache",
+   "scroll-restoration",
+   "session-restoration",
+   "state-persistence",
+   "interruption",
+   "pageshow",
+   "visibilitychange"
+  ]
+ },
+ {
+  "id": "PAT-PW-005",
+  "title": "Connectivity and offline \u2014 detecting, communicating, and degrading gracefully",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-005-connectivity-offline.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "offline",
+   "connectivity",
+   "network-failure",
+   "navigator-online",
+   "offline-page",
+   "service-worker",
+   "status-messages",
+   "graceful-degradation"
+  ]
+ },
+ {
+  "id": "PAT-PW-006",
+  "title": "Caching strategies as UX \u2014 freshness, stale indicators, and refresh",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-006-caching-freshness.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "caching",
+   "service-worker",
+   "cache-first",
+   "network-first",
+   "stale-while-revalidate",
+   "freshness",
+   "stale-data",
+   "refresh",
+   "last-updated"
+  ]
+ },
+ {
+  "id": "PAT-PW-007",
+  "title": "Queued actions, background sync, optimistic updates, and conflicts",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-007-sync-optimistic-conflicts.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "sync",
+   "background-sync",
+   "offline-queue",
+   "optimistic-ui",
+   "conflicts",
+   "pending-state",
+   "multi-device",
+   "rollback"
+  ]
+ },
+ {
+  "id": "PAT-PW-008",
+  "title": "Unsaved changes \u2014 drafts and autosave first, beforeunload as a last resort",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-008-unsaved-changes.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "unsaved-changes",
+   "beforeunload",
+   "autosave",
+   "drafts",
+   "navigation-guard",
+   "visibilitychange",
+   "data-loss",
+   "session-timeout"
+  ]
+ },
+ {
+  "id": "PAT-PW-009",
+  "title": "Notifications and permissions \u2014 timing, pre-prompts, badging, and respecting denial",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-009-notifications-permissions.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "notifications",
+   "push",
+   "permissions",
+   "pre-prompt",
+   "badging",
+   "ios",
+   "user-activation",
+   "consent"
+  ]
+ },
+ {
+  "id": "PAT-PW-010",
+  "title": "Platform capability differences \u2014 Safari/iOS, Firefox, Chromium, and feature detection",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-010-platform-capability-differences.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "compatibility",
+   "feature-detection",
+   "progressive-enhancement",
+   "ios",
+   "safari",
+   "firefox",
+   "chromium",
+   "storage-eviction",
+   "experimental-features"
+  ]
+ },
+ {
+  "id": "PAT-PW-011",
+  "title": "Perceived performance \u2014 Core Web Vitals, placeholders, and view transitions",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-011-perceived-performance-vitals.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "performance",
+   "core-web-vitals",
+   "lcp",
+   "inp",
+   "cls",
+   "skeletons",
+   "view-transitions",
+   "reduced-motion",
+   "perceived-speed",
+   "response-time"
+  ]
+ },
+ {
+  "id": "PAT-PW-012",
+  "title": "App updates \u2014 service worker versions, notifying users, and never reloading mid-task",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/pwa/PAT-PW-012-app-updates.md",
+  "scope": "pwa",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "updates",
+   "service-worker",
+   "skipwaiting",
+   "reload",
+   "versioning",
+   "update-banner",
+   "multi-window",
+   "data-loss"
+  ]
+ },
+ {
+  "id": "PAT-RS-001",
+  "title": "Navigation transformation across window sizes \u2014 same destinations, different presentation",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-001-navigation-transformation.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "navigation",
+   "responsive-navigation",
+   "tab-bar",
+   "navigation-rail",
+   "sidebar",
+   "drawer",
+   "destination-parity",
+   "wayfinding"
+  ]
+ },
+ {
+  "id": "PAT-RS-002",
+  "title": "Layout reflow and canonical layouts \u2014 list-detail, supporting pane, feed",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-002-layout-reflow-canonical-layouts.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "layout",
+   "reflow",
+   "list-detail",
+   "split-view",
+   "supporting-pane",
+   "feed",
+   "multi-pane",
+   "canonical-layouts",
+   "source-order"
+  ]
+ },
+ {
+  "id": "PAT-RS-003",
+  "title": "Content prioritization across viewports \u2014 reorder and disclose, never remove function",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-003-content-prioritization.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "content-priority",
+   "progressive-disclosure",
+   "mobile-first",
+   "feature-parity",
+   "truncation",
+   "source-order",
+   "art-direction"
+  ]
+ },
+ {
+  "id": "PAT-RS-004",
+  "title": "Adaptive density \u2014 spacing tokens per window class and input, and user density settings",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-004-adaptive-density.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "density",
+   "spacing",
+   "design-tokens",
+   "margins",
+   "target-size",
+   "density-toggle",
+   "any-pointer",
+   "user-preferences"
+  ]
+ },
+ {
+  "id": "PAT-RS-005",
+  "title": "Control positioning \u2014 where primary and secondary actions sit per viewport and input",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-005-control-positioning.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "primary-action",
+   "secondary-actions",
+   "toolbar",
+   "fab",
+   "sticky-action-bar",
+   "overflow",
+   "reachability",
+   "safe-area",
+   "focus-obscured"
+  ]
+ },
+ {
+  "id": "PAT-RS-006",
+  "title": "Breakpoint strategy \u2014 window size classes plus content-driven breakpoints",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-006-breakpoints-window-classes.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "breakpoints",
+   "window-size-classes",
+   "media-queries",
+   "content-driven-breakpoints",
+   "reflow",
+   "testing-widths",
+   "design-tokens"
+  ]
+ },
+ {
+  "id": "PAT-RS-007",
+  "title": "Container queries vs media queries \u2014 component-level vs page-level responsiveness",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-007-container-vs-media-queries.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "container-queries",
+   "media-queries",
+   "components",
+   "design-systems",
+   "user-preferences",
+   "prefers-reduced-motion",
+   "prefers-color-scheme"
+  ]
+ },
+ {
+  "id": "PAT-RS-008",
+  "title": "Responsive typography and spacing \u2014 bounded fluid type, minimum sizes, and measure",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-008-responsive-typography-spacing.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "typography",
+   "fluid-type",
+   "clamp",
+   "rem",
+   "line-length",
+   "measure",
+   "zoom",
+   "text-resize",
+   "text-spacing",
+   "localization"
+  ]
+ },
+ {
+  "id": "PAT-RS-009",
+  "title": "Input detection \u2014 touch vs pointer capabilities, runtime signals, and hybrid devices",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-009-input-detection-touch-vs-pointer.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "input-modality",
+   "pointer",
+   "hover",
+   "any-pointer",
+   "any-hover",
+   "media-queries",
+   "hybrid-devices",
+   "touch",
+   "progressive-enhancement"
+  ]
+ },
+ {
+  "id": "PAT-RS-010",
+  "title": "Same task, different interaction \u2014 modality-appropriate control variants",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-010-same-task-different-interaction.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "input-modality",
+   "date-entry",
+   "select",
+   "combobox",
+   "filters",
+   "multi-select",
+   "reorder",
+   "drag-and-drop",
+   "numeric-entry",
+   "text-editing",
+   "keyboard"
+  ]
+ },
+ {
+  "id": "PAT-RS-011",
+  "title": "Orientation changes, foldables, and hybrid devices \u2014 adapting mid-task without losing work",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/responsive/PAT-RS-011-orientation-foldables-hybrids.md",
+  "scope": "responsive",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "orientation",
+   "rotation",
+   "foldables",
+   "viewport-segments",
+   "hinge",
+   "hybrid-devices",
+   "touch-laptop",
+   "tablet-keyboard",
+   "multitasking",
+   "state-preservation"
+  ]
+ },
+ {
+  "id": "PAT-SH-001",
+  "title": "Navigation structure and wayfinding",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-001-navigation-wayfinding.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "navigation",
+   "wayfinding",
+   "breadcrumbs",
+   "information-architecture",
+   "current-location",
+   "deep-links"
+  ]
+ },
+ {
+  "id": "PAT-SH-002",
+  "title": "Form fundamentals \u2014 fields, grouping, labels, and required status",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-002-form-fundamentals.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "forms",
+   "labels",
+   "placeholders",
+   "required-fields",
+   "optional-fields",
+   "help-text",
+   "field-reduction"
+  ]
+ },
+ {
+  "id": "PAT-SH-003",
+  "title": "Validation timing and error messages",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-003-validation-error-messages.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "validation",
+   "inline-validation",
+   "error-messages",
+   "error-summary",
+   "positive-validation",
+   "forms"
+  ]
+ },
+ {
+  "id": "PAT-SH-004",
+  "title": "Search \u2014 entry, suggestions, results, and no-results recovery",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-004-search.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "search",
+   "autocomplete",
+   "suggestions",
+   "search-scope",
+   "no-results",
+   "recent-searches"
+  ]
+ },
+ {
+  "id": "PAT-SH-005",
+  "title": "Filtering and sorting collections",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-005-filtering-sorting.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "filtering",
+   "faceted-search",
+   "sorting",
+   "applied-filters",
+   "result-count",
+   "live-update",
+   "apply-button"
+  ]
+ },
+ {
+  "id": "PAT-SH-006",
+  "title": "Selection and bulk actions",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-006-selection-bulk-actions.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "selection",
+   "multi-select",
+   "bulk-actions",
+   "select-all",
+   "checkboxes",
+   "batch-operations"
+  ]
+ },
+ {
+  "id": "PAT-SH-007",
+  "title": "Long lists \u2014 pagination, Load more, and infinite scroll",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-007-lists-pagination-infinite-scroll.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "lists",
+   "pagination",
+   "load-more",
+   "infinite-scroll",
+   "scroll-restoration",
+   "footer",
+   "feeds"
+  ]
+ },
+ {
+  "id": "PAT-SH-008",
+  "title": "Action menus, overflow, and icon-only buttons",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-008-menus-action-overflow.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "menus",
+   "overflow",
+   "kebab-menu",
+   "icon-buttons",
+   "action-labels",
+   "destructive-items",
+   "toolbars"
+  ]
+ },
+ {
+  "id": "PAT-SH-009",
+  "title": "Feedback and system status \u2014 choosing toasts, inline messages, and banners",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-009-feedback-system-status.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "feedback",
+   "system-status",
+   "toasts",
+   "snackbars",
+   "banners",
+   "inline-status",
+   "success-messages",
+   "live-regions"
+  ]
+ },
+ {
+  "id": "PAT-SH-010",
+  "title": "Loading states, progress, and perceived speed",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-010-loading-states.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "loading",
+   "spinners",
+   "skeletons",
+   "progress-bars",
+   "optimistic-ui",
+   "response-times",
+   "perceived-performance"
+  ]
+ },
+ {
+  "id": "PAT-SH-011",
+  "title": "Destructive actions \u2014 undo, confirmation, and proportional friction",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-011-destructive-actions-undo.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "destructive-actions",
+   "undo",
+   "confirmation-dialogs",
+   "delete",
+   "irreversible",
+   "friction",
+   "recovery"
+  ]
+ },
+ {
+  "id": "PAT-SH-012",
+  "title": "Empty states \u2014 first use, no results, cleared, and error-empty",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-012-empty-states.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "empty-states",
+   "no-results",
+   "first-use",
+   "zero-data",
+   "cleared-state",
+   "error-state"
+  ]
+ },
+ {
+  "id": "PAT-SH-013",
+  "title": "Onboarding and first use \u2014 tours, contextual help, and sequencing sign-up and permissions",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-013-onboarding-first-use.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "onboarding",
+   "first-use",
+   "tutorials",
+   "product-tours",
+   "contextual-help",
+   "sign-up",
+   "permissions",
+   "setup"
+  ]
+ },
+ {
+  "id": "PAT-SH-014",
+  "title": "Progressive disclosure \u2014 accordions, show more, steppers, and advanced settings",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-014-progressive-disclosure.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "progressive-disclosure",
+   "accordions",
+   "show-more",
+   "truncation",
+   "steppers",
+   "wizards",
+   "advanced-settings"
+  ]
+ },
+ {
+  "id": "PAT-SH-015",
+  "title": "Dialogs and modality \u2014 modal, nonmodal, sheets, and inline expansion",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-015-dialogs-modality.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "dialogs",
+   "modals",
+   "modality",
+   "sheets",
+   "popovers",
+   "focus-management",
+   "dismissal",
+   "stacking"
+  ]
+ },
+ {
+  "id": "PAT-SH-016",
+  "title": "Failure recovery \u2014 server and network errors, retry, and preserving input",
+  "type": "pattern",
+  "status": "active",
+  "path": "patterns/shared/PAT-SH-016-failure-recovery.md",
+  "scope": "shared",
+  "platforms": [
+   "mobile",
+   "tablet",
+   "desktop"
+  ],
+  "inputs": [
+   "touch",
+   "pointer",
+   "keyboard",
+   "assistive-tech"
+  ],
+  "topics": [
+   "errors",
+   "failure",
+   "retry",
+   "network-errors",
+   "server-errors",
+   "error-pages",
+   "partial-failure",
+   "input-preservation",
+   "session-expiry"
+  ]
+ },
+ {
+  "id": "P-01",
+  "title": "Task effectiveness and efficiency",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-01-task-effectiveness.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "tasks",
+   "efficiency",
+   "goals",
+   "steps"
+  ]
+ },
+ {
+  "id": "P-02",
+  "title": "Discoverability and learnability",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-02-discoverability-learnability.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "discoverability",
+   "learnability",
+   "affordances",
+   "onboarding"
+  ]
+ },
+ {
+  "id": "P-03",
+  "title": "Information architecture",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-03-information-architecture.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "information-architecture",
+   "grouping",
+   "labeling",
+   "hierarchy",
+   "mental-models"
+  ]
+ },
+ {
+  "id": "P-04",
+  "title": "Navigation and orientation",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-04-navigation-orientation.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "navigation",
+   "wayfinding",
+   "orientation",
+   "back",
+   "location"
+  ]
+ },
+ {
+  "id": "P-05",
+  "title": "Cognitive clarity and mental models",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-05-cognitive-clarity.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "cognitive-load",
+   "mental-models",
+   "clarity",
+   "plain-language",
+   "chunking"
+  ]
+ },
+ {
+  "id": "P-06",
+  "title": "Interaction ergonomics",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-06-interaction-ergonomics.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "ergonomics",
+   "touch",
+   "pointer",
+   "reach",
+   "targets",
+   "fatigue"
+  ]
+ },
+ {
+  "id": "P-07",
+  "title": "Input efficiency",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-07-input-efficiency.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "forms",
+   "input",
+   "keyboards",
+   "autofill",
+   "data-entry"
+  ]
+ },
+ {
+  "id": "P-08",
+  "title": "Visual hierarchy and readability",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-08-visual-hierarchy-readability.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "hierarchy",
+   "typography",
+   "readability",
+   "contrast",
+   "layout"
+  ]
+ },
+ {
+  "id": "P-09",
+  "title": "Consistency and platform familiarity",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-09-consistency-familiarity.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "consistency",
+   "conventions",
+   "platform",
+   "standards",
+   "familiarity"
+  ]
+ },
+ {
+  "id": "P-10",
+  "title": "System feedback and predictable behavior",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-10-feedback-predictability.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "feedback",
+   "status",
+   "response-time",
+   "predictability",
+   "animation"
+  ]
+ },
+ {
+  "id": "P-11",
+  "title": "Error prevention and recovery",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-11-error-prevention-recovery.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "errors",
+   "prevention",
+   "recovery",
+   "undo",
+   "confirmation",
+   "validation"
+  ]
+ },
+ {
+  "id": "P-12",
+  "title": "Accessibility and inclusive design",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-12-accessibility-inclusion.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "accessibility",
+   "wcag",
+   "inclusive-design",
+   "assistive-technology",
+   "keyboard",
+   "screen-reader"
+  ]
+ },
+ {
+  "id": "P-13",
+  "title": "Performance and responsiveness",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-13-performance-responsiveness.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "performance",
+   "speed",
+   "core-web-vitals",
+   "perceived-performance",
+   "resilience"
+  ]
+ },
+ {
+  "id": "P-14",
+  "title": "User control, privacy, and trust",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-14-control-privacy-trust.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "control",
+   "freedom",
+   "privacy",
+   "permissions",
+   "trust",
+   "dark-patterns",
+   "transparency"
+  ]
+ },
+ {
+  "id": "P-15",
+  "title": "Visual craft and appropriate delight",
+  "type": "principle",
+  "status": "active",
+  "path": "principles/P-15-craft-delight.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "craft",
+   "polish",
+   "motion",
+   "delight",
+   "brand",
+   "animation"
+  ]
+ },
+ {
+  "id": "GOV-CONFLICT",
+  "title": "Resolving conflicting evidence and contributor disagreement",
+  "type": "process",
+  "status": "active",
+  "path": "governance/conflict-resolution.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-INTAKE",
+  "title": "Research intake and source verification",
+  "type": "process",
+  "status": "active",
+  "path": "governance/research-intake.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-LIFECYCLE",
+  "title": "Pattern lifecycle and identifier rules",
+  "type": "process",
+  "status": "active",
+  "path": "governance/pattern-lifecycle.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-REVIEW",
+  "title": "Review process for changes",
+  "type": "process",
+  "status": "active",
+  "path": "governance/review-process.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-RUBRIC",
+  "title": "Revising the rubric and quality gates",
+  "type": "process",
+  "status": "active",
+  "path": "governance/rubric-revision.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EVAL-METHODS",
+  "title": "Evaluation methods and what each can verify",
+  "type": "reference",
+  "status": "active",
+  "path": "evaluation/methods.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EVAL-RETRIEVAL",
+  "title": "Retrieval guide \u2014 finding the right knowledge without loading everything",
+  "type": "reference",
+  "status": "active",
+  "path": "evaluation/retrieval-guide.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EVAL-TEMPLATE",
+  "title": "Standard review output format",
+  "type": "reference",
+  "status": "active",
+  "path": "evaluation/review-template.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EX-RETRIEVAL",
+  "title": "Retrieval tests",
+  "type": "reference",
+  "status": "active",
+  "path": "examples/retrieval-tests.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "EX-SCENARIOS",
+  "title": "Representative evaluation scenarios",
+  "type": "reference",
+  "status": "active",
+  "path": "examples/scenarios.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "GOV-LIMITATIONS",
+  "title": "Known limitations and research gaps",
+  "type": "reference",
+  "status": "active",
+  "path": "governance/limitations.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "INT-OPENVIKING",
+  "title": "OpenViking integration \u2014 ingestion, refresh, retrieval, staleness",
+  "type": "reference",
+  "status": "active",
+  "path": "integration/openviking.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "openviking",
+   "retrieval",
+   "ingestion",
+   "integration"
+  ]
+ },
+ {
+  "id": "SRC-000",
+  "title": "Evidence classes and how to weigh them",
+  "type": "reference",
+  "status": "active",
+  "path": "sources/evidence-classes.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": [
+   "evidence",
+   "methodology",
+   "citations"
+  ]
+ },
+ {
+  "id": "RUBRIC-DIMENSIONS",
+  "title": "Evaluation dimensions and behavioral anchors",
+  "type": "rubric",
+  "status": "active",
+  "path": "rubric/dimensions.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "RUBRIC-GATES",
+  "title": "Objective quality gates",
+  "type": "rubric",
+  "status": "active",
+  "path": "rubric/quality-gates.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "RUBRIC-SCORING",
+  "title": "Scoring procedure, confidence, severity, weights, and blocking conditions",
+  "type": "rubric",
+  "status": "active",
+  "path": "rubric/scoring.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-001",
+  "title": "W3C and WHATWG (WCAG 2.2, WCAG2Mobile, WAI-ARIA APG, web specifications)",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-001-w3c.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-002",
+  "title": "Nielsen Norman Group (NN/g)",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-002-nngroup.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-003",
+  "title": "Baymard Institute",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-003-baymard.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-004",
+  "title": "Apple Human Interface Guidelines",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-004-apple-hig.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-005",
+  "title": "Google Material Design 3 and Android adaptive guidance",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-005-material.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-006",
+  "title": "web.dev and Chrome for Developers",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-006-webdev.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-007",
+  "title": "MDN Web Docs and MDN browser-compat-data",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-007-mdn.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-008",
+  "title": "Design systems and product documentation (Carbon, Atlassian, React, VS Code, Adrian Roselli)",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-008-design-systems.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-009",
+  "title": "Mobbin",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-009-mobbin.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-010",
+  "title": "Other cited sources (ISO 9241-11, Hoober, Butterick, Norman, Deceptive Design, Microsoft Inclusive Design, Miller and Card)",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-010-other.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ },
+ {
+  "id": "SRC-011",
+  "title": "OpenViking documentation (for the integration guide)",
+  "type": "source",
+  "status": "active",
+  "path": "sources/SRC-011-openviking.md",
+  "scope": "",
+  "platforms": [],
+  "inputs": [],
+  "topics": []
+ }
+]
