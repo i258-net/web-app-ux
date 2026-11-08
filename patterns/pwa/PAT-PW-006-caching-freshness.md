@@ -49,7 +49,7 @@ Service-worker caching decides what users see before the network answers. Teams 
 ## Evidence
 
 - **E3** MDN Web Docs, "Caching — Progressive web apps". https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Caching — Defines cache-first, network-first, and stale-while-revalidate with example uses. Versioning makes cached static assets safe to reuse.
-- **E3** Google web.dev, "Caching". https://web.dev/learn/pwa/caching — The same strategies. Network-first falls back to cache when the network fails. Stale-while-revalidate's refreshed copy normally helps a later request, not the current one.
+- **E3** Google web.dev, Learn PWA: "Serving". https://web.dev/learn/pwa/serving — Defines the same strategies. Network-first falls back to cache when the network fails. Stale-while-revalidate's refreshed copy normally helps a later request, not the current one.
 - **E3** Google web.dev, "Workbox". https://web.dev/learn/pwa/workbox — Workbox provides precaching, routing, runtime strategies, and expiration modules.
 - **E3** Google web.dev, "Back/forward cache". https://web.dev/articles/bfcache — bfcache snapshots are a separate cache. A restored page can show state that was current when the user left.
 - **E4** Nielsen Norman Group, "Visibility of System Status". https://www.nngroup.com/articles/visibility-system-status/ — Users need to know the system's current state. Silent changes undermine predictability and trust.

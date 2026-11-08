@@ -39,4 +39,24 @@ Independent validation was performed by GPT-6.1 Sol (high reasoning) in two pass
 
 ## Evidence validation (`evidence-validation.md`)
 
-Pending at the time this file was first written; the table is appended when the report arrives.
+| ID | Severity | Disposition | Where |
+|---|---|---|---|
+| M01 | material | Fixed: denial-rate and Chromium-research claims removed; MDN gesture requirement and web.dev E4 advice cited separately | P-14 |
+| M02 | material | Fixed: numeric ~300 ms generalization removed; Apple (no number) and Material (350–750 ms spatial) stated | P-15 |
+| M03 | material | Fixed: claim narrowed to what the article-level Baymard citations in PAT-SH-001/PAT-MO-003 support; synthesis labeled | P-03 |
+| M04 | material | Fixed (with coherence F21): QG-070 reclassified as `policy`, source linked | quality-gates |
+| M05 | material | Fixed (with coherence F18): QG-030 reclassified as `policy`; normative outcome tests are QG-009/010 | quality-gates |
+| M06 | material | Fixed (with coherence F07): QG-007/008 carry scope and exemptions | quality-gates |
+| m07 | minor | Fixed: Tractinsky attribution and "replicated since" removed | P-15 |
+| m08 | minor | Fixed: "most used" removed | P-04 |
+| m09 | minor | Fixed: Nielsen's five components stated accurately; effectiveness attributed to ISO | P-01 |
+| m10 | minor | Fixed: cites web.dev Serving | PAT-PW-006 |
+| m11 | minor | Fixed: ranges attributed (Baymard 50–75 E2; Bringhurst via web.dev 45–75 E4; Butterick 45–90 E4); speed claim removed | P-08 |
+| m12 | minor | Fixed: mobile hidden-vs-combo condition and participant count stated | P-02 |
+| m13 | minor | Fixed: SC 2.4.13 added to Evidence | PAT-DT-004 |
+| m14 | minor | Fixed: "minority" replaced with "subset"; no percentage | P-12 |
+| m15 | minor | Fixed: page URLs added to QG-040, QG-070, QG-080…082 | quality-gates |
+| m16 | minor | Fixed: `ch` definition cited to MDN | PAT-RS-008 |
+| N17 | note | Fixed: QG-050 widths labeled a repository test matrix | quality-gates |
+| N18 | note | Fixed: SRC-010 and SRC-005 rows reconciled with current citations | sources |
+| N19 | note | Accepted as limitation: ISO 9241-11 definition cited from the public abstract only | limitations |

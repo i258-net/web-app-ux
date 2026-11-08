@@ -55,8 +55,8 @@ _No page from this publisher is cited by a numbered finding._
 | Title | URL | Published/updated | Accessed | Evidence class | Finding IDs |
 |---|---|---|---|---|---|
 | ISO 9241-11:2018, Ergonomics of human-system interaction — Usability: Definitions and concepts | <https://www.iso.org/standard/63500.html> | not recorded | not recorded | E1 (definitional; paywalled) | none (principle only: P-01) |
-| Norman, D. "Signifiers, not affordances." | <https://jnd.org/signifiers_not_affordances/> | not recorded | not recorded | E4 | none (principle only: P-02) |
-| Hoober, S. "How Do Users Really Hold Mobile Devices?" UXmatters, 2013 | <https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php> | not recorded | not recorded | E2 (observational; sampling limits) | none (principle only: P-06) |
-| Butterick, M. *Practical Typography*, "Line length." | <https://practicaltypography.com/line-length.html> | not recorded | not recorded | E4 | none (principle only: P-08) |
+| Norman, D. "Signifiers, not affordances." | <https://jnd.org/signifiers_not_affordances/> | — | 2026-11-08 (404; citation removed from P-02) | E4 | none |
+| Hoober, S. "How Do Users Really Hold Mobile Devices?" UXmatters, 2013 | <https://www.uxmatters.com/mt/archives/2013/02/how-do-users-really-hold-mobile-devices.php> | 2013-02 | 2026-11-08 (fetched by the mobile pattern writer and the evidence validator) | E2 (observational; sampling limits) | PAT-MO-002; P-06 |
+| Butterick, M. *Practical Typography*, "Line length." | <https://practicaltypography.com/line-length.html> | not shown | 2026-11-08 (evidence validator; recommends 45–90 characters including spaces) | E4 | P-08 |
 | Microsoft, Inclusive Design toolkit | <https://inclusive.microsoft.design/> | not recorded | not recorded | E4 | none (principle only: P-12) |
 | Brignull, H. Deceptive Design (formerly Dark Patterns) catalog | <https://www.deceptive.design/> | not recorded | not recorded | E4 | none (principle only: P-14) |

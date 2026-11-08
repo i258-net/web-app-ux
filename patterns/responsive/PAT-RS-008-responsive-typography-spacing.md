@@ -46,7 +46,8 @@ Line length is usually left to the container, so prose runs 150 characters wide 
 
 ## Evidence
 
-- **E4** Google (web.dev), "Typography". https://web.dev/learn/design/typography — Combines viewport-relative sizing with relative units and `clamp()` for minimum, preferred, and maximum values; pure viewport sizing yields unsuitable extremes; manage line length and line height; `ch` measures the "0" glyph width, not an exact character count.
+- **E4** Google (web.dev), "Typography". https://web.dev/learn/design/typography — Combines viewport-relative sizing with relative units and `clamp()` for minimum, preferred, and maximum values; pure viewport sizing yields unsuitable extremes; manage line length and line height.
+- **E3** MDN, "<length>" (CSS values). https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/length — `ch` is the advance measure of the "0" glyph, so `65ch` is not an exact character count (verified 2026-11-08).
 - **E4** Google (web.dev), "Accessibility". https://web.dev/learn/design/accessibility — Respect users who need larger text or zoom; do not disable zoom to make a layout fit.
 - **E2** Baymard Institute, "Readability: The Optimal Line Length". https://baymard.com/research-articles/line-length-readability — Recommends 50–75 characters per line for body text; overly long product descriptions discouraged reading in e-commerce testing. Wider application is our interpretation.
 - **E1** W3C, "WCAG 2.2 — 1.4.4 Resize Text". https://www.w3.org/TR/WCAG22/#resize-text — Text resizable to 200 % without assistive technology and without loss of content or functionality.

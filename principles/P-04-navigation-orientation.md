@@ -19,7 +19,7 @@ At every moment users know where they are, how they got there, where they can go
 ## Why it matters
 
 - Wayfinding is a basic cognitive need; disorientation produces anxiety and abandonment. NN/g's wayfinding guidance treats "where am I" and "where can I go" as the minimum any page must answer (E4).
-- On the web, the browser's back button is the most used navigation control; breaking it (modals that trap, SPAs that do not push history) is a long-documented top usability failure (E4, NN/g).
+- On the web, the browser's back button is the user's standard route backwards; breaking it (modals that trap, SPAs that do not push history) is a long-documented top usability failure (E4, NN/g).
 - In installed PWAs the browser back button and URL bar may be absent, so the app must provide its own orientation and back controls (E3, web.dev).
 
 ## How to recognize it

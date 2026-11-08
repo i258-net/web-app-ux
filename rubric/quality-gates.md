@@ -66,7 +66,7 @@ Each row is an operational summary **including the SC's exceptions**. Before rep
 
 | ID | Gate | Kind | Threshold | Source | Verify |
 |---|---|---|---|---|---|
-| QG-040 | Primary touch targets ≥ 44×44 CSS px with ≥ 8 px spacing between adjacent targets. Reference figures: Apple HIG 44×44 pt default control size (28×28 pt minimum); Material 48×48 dp with 8 dp spacing; WCAG 2.5.5 (AAA) 44×44 CSS px | threshold | 44–48 px | Apple HIG (E3), Material 3 (E3), WCAG 2.5.5 AAA (E1) | A (partial), M |
+| QG-040 | Primary touch targets ≥ 44×44 CSS px with ≥ 8 px spacing between adjacent targets. Reference figures: Apple HIG 44×44 pt default control size (28×28 pt minimum); Material 48×48 dp with 8 dp spacing; WCAG 2.5.5 (AAA) 44×44 CSS px | threshold | 44–48 px | [Apple HIG Accessibility](https://developer.apple.com/design/human-interface-guidelines/accessibility) (E3), [Material Designing](https://m3.material.io/foundations/designing) (E3), [WCAG 2.5.5](https://www.w3.org/TR/WCAG22/#target-size-enhanced) (E1, AAA); 44–48 CSS px is a repository synthesis of these | A (partial), M |
 | QG-041 | No functionality is hover-only on any device where touch is a supported input | threshold | — | WCAG 1.4.13 context; NN/g hover guidance (E4); web.dev interaction (E3) | M |
 | QG-042 | Input handling is not inferred from viewport width: hover- and pointer-dependent behavior is gated on capability media features (`pointer`, `hover`, `any-pointer`, `any-hover`) or on the active event's `pointerType`, never on breakpoints. Media features report capabilities, not the input in use | threshold | — | web.dev Learn Design (E3); MDN PointerEvent.pointerType (E3) | source inspection, M |
 
@@ -74,7 +74,7 @@ Each row is an operational summary **including the SC's exceptions**. Before rep
 
 | ID | Gate | Kind | Threshold | Verify |
 |---|---|---|---|---|
-| QG-050 | No horizontal *page* scroll or clipped content at 320, 375, 768, 1024, 1440, 1920 CSS px widths. Contained scrolling regions and essential two-dimensional workspaces (maps, canvases, wide data tables with keyboard-reachable scroll) are not failures | threshold (at 320 px the standard is QG-010, with its essential-layout exception) | — | A, M |
+| QG-050 | No horizontal *page* scroll or clipped content at 320, 375, 768, 1024, 1440, 1920 CSS px widths. Contained scrolling regions and essential two-dimensional workspaces (maps, canvases, wide data tables with keyboard-reachable scroll) are not failures | threshold (at 320 px the standard is QG-010, with its essential-layout exception). The other widths are a repository-selected test matrix covering the five viewport classes, not research-derived values | — | A, M |
 | QG-051 | Primary navigation and primary action present and operable at every supported viewport | threshold | — | M |
 | QG-052 | Layout honors `env(safe-area-inset-*)` when `viewport-fit=cover` is used; fixed controls not under notches or home indicators | threshold | — | M (device), source inspection |
 | QG-053 | With the virtual keyboard open, the focused field and its error text are visible, and the submit control is reachable by scrolling without dismissing the keyboard (it need not be visible simultaneously) | threshold | — | M (device) |
@@ -93,7 +93,7 @@ Each row is an operational summary **including the SC's exceptions**. Before rep
 
 | ID | Gate | Kind | Threshold | Verify |
 |---|---|---|---|---|
-| QG-070 | Any operation exceeding ~1 s shows a progress indication; operations over ~10 s show determinate progress or allow leaving. Approximate limits adopted as repository policy from the NN/g restatement (E4) of Miller 1968 and Card et al. 1991; not measured boundaries | policy | NN/g response-time limits (E4 restating E2) | M |
+| QG-070 | Any operation exceeding ~1 s shows a progress indication; operations over ~10 s show determinate progress or allow leaving. Approximate limits adopted as repository policy from the NN/g restatement (E4) of Miller 1968 and Card et al. 1991; not measured boundaries | policy | [NN/g, Response Times: The 3 Important Limits](https://www.nngroup.com/articles/response-times-3-important-limits/) (E4 restating E2) | M |
 | QG-071 | Network failure and offline states produce an in-UI message with a retry path; no raw errors or blank screens | threshold | — | M (throttling) |
 | QG-072 | Failed submissions preserve user input | threshold | — | M |
 
@@ -101,9 +101,9 @@ Each row is an operational summary **including the SC's exceptions**. Before rep
 
 | ID | Gate | Kind | Threshold | Verify |
 |---|---|---|---|---|
-| QG-080 | Largest Contentful Paint ≤ 2.5 s at the 75th percentile of page loads | threshold | web.dev Vitals (E3) | A (field preferred; lab indicative) |
-| QG-081 | Interaction to Next Paint ≤ 200 ms at p75 | threshold | web.dev Vitals (E3) | A (field) |
-| QG-082 | Cumulative Layout Shift ≤ 0.1 at p75 | threshold | web.dev Vitals (E3) | A |
+| QG-080 | Largest Contentful Paint ≤ 2.5 s at the 75th percentile of page loads | threshold | [web.dev, LCP](https://web.dev/articles/lcp); [web.dev, Web Vitals](https://web.dev/articles/vitals) (E3) | A (field preferred; lab indicative) |
+| QG-081 | Interaction to Next Paint ≤ 200 ms at p75 (discrete interactions: clicks, taps, key presses; not continuous scroll or drag) | threshold | [web.dev, INP](https://web.dev/articles/inp) (E3) | A (field) |
+| QG-082 | Cumulative Layout Shift ≤ 0.1 at p75 | threshold | [web.dev, CLS](https://web.dev/articles/cls) (E3) | A |
 | QG-083 | When `prefers-reduced-motion: reduce` is set, non-essential motion animation (movement, parallax, scaling, auto-playing motion) is disabled or replaced (a brief opacity fade is acceptable). Broader than SC 2.3.3 (AAA), which covers interaction-triggered motion only | policy (SC 2.3.3 AAA is the related standard) | MDN prefers-reduced-motion (E3); WCAG 2.3.3 (E1, AAA) | M, A (partial) |
 
 ## PWA (applicable only if the product is installable or claims offline support)

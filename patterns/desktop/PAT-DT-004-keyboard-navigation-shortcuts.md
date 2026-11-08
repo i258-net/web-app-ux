@@ -46,6 +46,7 @@ Keyboard operation is two things at once. It is a baseline accessibility require
 
 ## Evidence
 
+- **E1** W3C, WCAG 2.2 SC 2.4.13 Focus Appearance (AAA). https://www.w3.org/TR/WCAG22/#focus-appearance — indicator area at least that of a 2 CSS px perimeter and 3:1 change contrast between focused and unfocused states (F-SP-15).
 - **E1** W3C, WCAG 2.2 SC 2.1.1, 2.1.2, 2.1.4, 2.4.1, 2.4.3, 2.4.7, 2.4.11. https://www.w3.org/TR/WCAG22/#keyboard, https://www.w3.org/TR/WCAG22/#character-key-shortcuts, https://www.w3.org/TR/WCAG22/#focus-order, https://www.w3.org/TR/WCAG22/#focus-visible, https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum. Normative keyboard, focus, bypass, and character-shortcut requirements (F-SP-08/09/10/12/13/14, F-DX-20, F-DX-25).
 - **E3** W3C WAI APG, "Developing a Keyboard Interface". https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/. Roving tabindex and one Tab stop per composite (F-DX-24). Shortcut conflicts with OS, browser, and AT can block essential functions and should be avoided or mitigated (F-DX-21).
 - **E3** W3C WAI APG, Menubar and Tabs patterns. https://www.w3.org/WAI/ARIA/apg/patterns/menubar/, https://www.w3.org/WAI/ARIA/apg/patterns/tabs/. Role-specific keyboard contracts (F-SP-38, F-SP-39). APG is non-normative.
