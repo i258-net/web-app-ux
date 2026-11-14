@@ -50,7 +50,7 @@ Acting on many items at once saves effort, but selection is easy to get wrong:
 8. **Report partial outcomes.** After a bulk operation, say what succeeded and what failed ("18 archived, 2 couldn't be archived — Retry"). Keep the failed items selected for retry (PAT-SH-016).
 9. **Restore focus sensibly** after items are removed: move to the next item, or to the list container if it is empty.
 
-Expert accelerators (Shift-ranges, shortcuts, command-palette bulk actions) are in PAT-DT-011. Table-specific selection is in PAT-DT-007. Touch long-press and swipe selection are in PAT-MO-007.
+Expert accelerators (Shift-ranges, shortcuts, command-palette bulk actions) are in PAT-DT-011. Table-specific selection is in PAT-DT-007. On touch, enter a selection mode explicitly (a "Select" control or per-item checkboxes); long-press to select is a platform convention on Android and iOS lists (E3) that must be paired with a visible alternative because it is undiscoverable and conflicts with context menus in browsers. Swipe actions on rows (not selection) are in PAT-MO-007.
 
 ## Evidence
 
@@ -91,7 +91,7 @@ Expert accelerators (Shift-ranges, shortcuts, command-palette bulk actions) are 
 - Principles: P-01, P-10, P-11, P-12
 - Dimensions: D-01, D-07, D-08
 - Gates: QG-001, QG-008, QG-019, QG-028, QG-025
-- Patterns: PAT-DT-005 (selection models, focus), PAT-DT-007 (tables), PAT-DT-011 (expert bulk work), PAT-SH-011 (destructive actions), PAT-SH-008 (action menus), PAT-MO-007 (touch selection gestures), PAT-SH-016 (partial failure)
+- Patterns: PAT-DT-005 (selection models, focus), PAT-DT-007 (tables), PAT-DT-011 (expert bulk work), PAT-SH-011 (destructive actions), PAT-SH-008 (action menus), PAT-MO-007 (touch row actions and drag; not selection), PAT-SH-016 (partial failure)
 
 ## Change log
 

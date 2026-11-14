@@ -21,7 +21,7 @@ Everyone can perceive, operate, and understand the product, whatever their abili
 - WCAG 2.2 is the formal, testable standard referenced by law and procurement in many jurisdictions; its success criteria are normative and verifiable (E1). It is the backbone of this repository's quality gates.
 - The W3C's WCAG2Mobile note explains how the criteria apply to mobile contexts (touch targets, orientation, zoom, keyboards) and is informative, not normative (E4/E3).
 - Accessible design benefits everyone: captions in noisy places, keyboard operability for power users, large targets for anyone moving. The "curb-cut effect" is widely observed though rarely quantified (E4).
-- Automated checks catch only a minority of accessibility issue types; the rest require manual and assistive-technology testing (E4; see `../evaluation/methods.md`).
+- Automated checks establish only a subset of accessibility requirements; the rest require manual and assistive-technology testing (see `../evaluation/methods.md`). No coverage percentage is claimed here.
 
 ## How to recognize it
 

@@ -33,3 +33,4 @@ Run after each OpenViking refresh and whenever patterns are added or renamed. A 
 
 | Date | Source (OpenViking / local) | Passed | Failed (IDs) | Notes |
 |---|---|---|---|---|
+| 2026-11-08 | OpenViking (temporary local-folder snapshot, since removed) | 1/16 | R1–R15 | Run before semantic processing of `patterns/` had completed (directory abstracts "not ready"); INDEX.md chunks dominated results. Not a valid measure of ranking; rerun against the Git-watched resource `viking://resources/repos/i258-net/web-app-ux` after its first completed run. |

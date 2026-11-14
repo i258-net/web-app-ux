@@ -17,7 +17,7 @@ Each scenario states the material available (which determines the method), the d
 - **Task:** create an account with email, password, phone, and date of birth.
 - **Observed design:** placeholder-only labels; a numeric date field split into three inputs; error summary at the top of the page only; "Continue" button below the fold when the keyboard is open; password field blocks paste.
 - **Expected retrieval:** PAT-SH-002, PAT-SH-003, PAT-MO-004, PAT-MO-005, PAT-MO-001; P-07, P-11; D-04, D-07; QG-023, QG-022, QG-027, QG-053.
-- **Expected outcome:** Blocker candidates on paste-blocking (QG-027 likely fail, needs running app to confirm) and keyboard obscuring submit (QG-053: screenshot 2 suggests it; whether the control is reachable by scrolling needs a device); Major on placeholder labels; split date-of-birth field reported with the documented tradeoff (PAT-SH-002 vs PAT-RS-010 on dates far from today); method limits stated (keyboard type, autofill, validation timing unverified).
+- **Expected outcome:** Major D-04 finding on paste-blocking during password *creation* (QG-027 applies to authentication steps, not sign-up; flag the sign-in form for a QG-027 check) and on the keyboard obscuring submit (QG-053: screenshot 2 suggests it; whether the control is reachable by scrolling needs a device); Major on placeholder labels; split date-of-birth field reported with the documented tradeoff (PAT-SH-002 vs PAT-RS-010 on dates far from today); method limits stated (keyboard type, autofill, validation timing unverified).
 
 ## EX-02 Desktop settings form (running application)
 
@@ -25,7 +25,7 @@ Each scenario states the material available (which determines the method), the d
 - **Context:** desktop, pointer + keyboard. Method: running app.
 - **Task:** change notification preferences and save.
 - **Observed design:** two-column form with unrelated fields side by side; Save button at bottom of a long page with no sticky bar; changes apply on toggle without Save for some controls and require Save for others; Tab order jumps between columns; focus indicator removed by CSS.
-- **Expected retrieval:** PAT-SH-002, PAT-DT-004, PAT-DT-005, PAT-DT-006, PAT-SH-009, PAT-SH-011; P-10, P-12; D-04, D-07, D-08; QG-004, QG-005, QG-020.
+- **Expected retrieval:** PAT-SH-002, PAT-DT-004, PAT-DT-005, PAT-DT-006, PAT-SH-009, PAT-SH-011; P-10, P-12; D-04, D-07, D-08; QG-004, QG-005, QG-020a.
 - **Expected outcome:** Blocker on missing focus indicator (QG-005 fail, verified); Major on inconsistent save model and focus order; recommendation of a consistent commit model with feedback.
 
 ## EX-03 Navigation adapting between mobile and desktop (prototype)
@@ -81,3 +81,12 @@ Each scenario states the material available (which determines the method), the d
 - **Observed design:** at 1920 px, body text lines exceed ~140 characters and three plan cards sit in a narrow center column with large empty margins; at 360 px, the recommended plan's CTA is visually identical to the others and the comparison table scrolls horizontally without indication; headings scale down to body size at 768 px.
 - **Expected retrieval:** PAT-RS-008, PAT-DT-001, PAT-RS-003, PAT-RS-004, PAT-DT-007, PAT-MO-008; P-08, P-15; D-05, D-10; QG-010, QG-050, QG-007.
 - **Expected outcome:** Major on line length and flattened hierarchy; Minor on undiscoverable horizontal scroll; contrast "not verified" without measurement.
+
+## EX-09 Cross-device handoff of an in-progress task (running application, two devices)
+
+- **Material:** running app on a phone (390×844) and a laptop (1440×900), same account; network available.
+- **Context:** cross-device continuity; PWA/web. Method: running app on both devices.
+- **Task:** start a multi-step expense report on the phone (upload a receipt, fill two fields), then open the app on the laptop and finish it.
+- **Observed design:** the laptop shows the report list without the draft; the draft exists only in the phone's local storage; after creating a second draft on the laptop, returning to the phone shows both with no indication which is newer; editing the same field on both and saving produces a silent last-write-wins.
+- **Expected retrieval:** PAT-PW-004, PAT-PW-007, PAT-PW-008, PAT-DT-010, PAT-RS-011; P-01, P-10, P-14; D-01, D-07, D-10; QG-062, QG-072.
+- **Expected outcome:** Major on local-only drafts for a multi-device product and on silent conflict overwrite; the review distinguishes saved-versus-local state, arrival at the right item and step on the second device, and conflict recovery; D-10 scored on continuity, not only on layout adaptation.

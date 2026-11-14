@@ -41,7 +41,7 @@ On a compact screen, every pixel of persistent chrome is a pixel of content lost
 8. **Use the document as the main scroller** where feasible; nested full-height scroll containers break browser chrome collapse, scroll restoration, and some AT behaviour.
 9. **Contain inner scrollers** (sheets, drawers, side panes) with `overscroll-behavior: contain` so they do not chain into the page (PAT-MO-007, PAT-MO-011).
 10. **Restore scroll position** when users return to a list (QG-063, PAT-SH-007, PAT-PW-004).
-11. **Keep scrolling smooth**: avoid layout work on scroll; watch interaction latency and layout shift from bars appearing (QG-081, QG-082).
+11. **Keep scrolling smooth**: avoid layout work on scroll; watch layout shift from bars appearing (QG-082). Scroll smoothness is continuous interaction, which INP (QG-081) does not measure; verify on a device and with frame/main-thread traces.
 
 **Pull-to-refresh**
 
@@ -78,7 +78,7 @@ Sticky bars on tablets and touch laptops follow the same budget; on wide windows
 - Does any sticky element hide a focused control or an anchored heading? [running app]
 - Do sticky bars keep targets ≥ 44 px and respect safe areas? [screenshot] [running app]
 - Is scroll position restored on Back in long lists? [running app]
-- Is scrolling smooth and free of layout shift as bars appear? [running app] [automated]
+- Is scrolling smooth on a mid-range device (frame drops observed, not inferred from INP)? [running app] Is it free of layout shift as bars appear? [running app] [automated]
 - Is there a non-gesture way to refresh? [running app]
 - Do participants find hide-on-scroll navigation when they need it? [user study]
 

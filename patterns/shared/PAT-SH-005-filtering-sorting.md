@@ -9,7 +9,7 @@ viewports: [compact, medium, expanded, large, extra-large]
 inputs: [touch, pointer, keyboard, assistive-tech]
 principles: [P-05, P-10, P-06, P-03]
 dimensions: [D-02, D-06, D-07]
-gates: [QG-028, QG-020, QG-061, QG-063]
+gates: [QG-028, QG-020b, QG-061, QG-063]
 related: [PAT-SH-004, PAT-SH-007, PAT-SH-012, PAT-RS-010, PAT-MO-011, PAT-DT-007, PAT-PW-003]
 evidence_strength: moderate
 status: active
@@ -43,7 +43,7 @@ Filters fail when criteria are not the ones users decide by, each tap reloads an
    - In tables, show sort state in the column header and expose it with `aria-sort` (PAT-DT-007).
 8. **Persist filter and sort state in the URL** so reload, Back from a detail view, and sharing restore them (QG-061, QG-063; PAT-PW-003).
 9. **Prevent dead ends.** Where cheap, show counts per value or disable zero-result values with an explanation. When a combination yields nothing, list the active filters with one-tap removal (PAT-SH-012).
-10. **No unexpected context change** (QG-020): choosing a value never navigates away or moves focus.
+10. **No unexpected context change** (QG-020b): choosing a value never navigates away or moves focus.
 
 Compact presentations (sheet vs full-screen panel vs tray) are in PAT-MO-011 and PAT-RS-010.
 
@@ -84,7 +84,7 @@ Compact presentations (sheet vs full-screen panel vs tray) are in PAT-MO-011 and
 
 - Principles: P-05, P-10, P-06, P-03
 - Dimensions: D-02, D-06, D-07
-- Gates: QG-028, QG-020, QG-061, QG-063
+- Gates: QG-028, QG-020b, QG-061, QG-063
 - Patterns: PAT-SH-004 (search), PAT-SH-007 (lists), PAT-SH-012 (no results), PAT-RS-010 (modality variants), PAT-MO-011 (sheets), PAT-DT-007 (table sorting), PAT-PW-003 (URL state)
 
 ## Change log

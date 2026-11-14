@@ -18,14 +18,14 @@ The product feels considered. Details are consistent, alignment is precise, moti
 
 ## Why it matters
 
-- Perceived quality affects perceived usability: the aesthetic–usability effect, first documented by Kurosu and Kashimura (1995) and replicated since, shows users rate attractive interfaces as easier to use (E2). This cuts both ways: polish can mask real problems during evaluation, which is why craft is scored separately and weighted lightly in the rubric.
+- Perceived quality affects perceived usability: the aesthetic–usability effect, documented by Kurosu and Kashimura (1995) as reported by NN/g, shows users rate attractive interfaces as easier to use (E2 via E4 restatement). This cuts both ways: polish can mask real problems during evaluation, which is why craft is scored separately and weighted lightly in the rubric.
 - Motion that conveys spatial relationships (where a sheet came from, where an item went) aids orientation; motion that merely decorates adds delay. Material and Apple both frame animation as communication (E3).
 - Vestibular disorders make some motion physically harmful; WCAG 2.3.3 (AAA) and the `prefers-reduced-motion` media feature exist for this reason (E1/E3).
 
 ## How to recognize it
 
 - Consistent spacing, alignment, iconography, and type across every screen and state, including empty, loading, and error states.
-- Transitions are short (typically under ~300 ms), purposeful, and interruptible; none block input.
+- Transitions are brief for their purpose (Apple gives no number; Material's standard spatial durations run from roughly 350 to 750 ms for larger movements), purposeful, and interruptible; none block input or delay the next action.
 - Personality lives in copy, illustration, and empty states, not in obstacles.
 - `prefers-reduced-motion` disables non-essential animation; nothing flashes.
 
@@ -37,7 +37,7 @@ The product feels considered. Details are consistent, alignment is precise, moti
 
 ## Evidence
 
-- Moran, K. "The Aesthetic-Usability Effect." NN/g. https://www.nngroup.com/articles/aesthetic-usability-effect/ — E4 summarizing E2 (Kurosu & Kashimura 1995; Tractinsky et al.).
+- Moran, K. "The Aesthetic-Usability Effect." NN/g. https://www.nngroup.com/articles/aesthetic-usability-effect/ — E4 summarizing E2 (Kurosu & Kashimura 1995).
 - Material Design 3, Motion. https://m3.material.io/styles/motion/overview — E3.
 - Apple HIG, Motion. https://developer.apple.com/design/human-interface-guidelines/motion — E3.
 - W3C WCAG 2.2 SC 2.3.3 Animation from Interactions (AAA). https://www.w3.org/TR/WCAG22/#animation-from-interactions — E1. MDN, `prefers-reduced-motion`. https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion — E3.

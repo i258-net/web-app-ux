@@ -31,7 +31,7 @@ The interface matches how users already think about the task and asks them to ho
 
 ## Contextual implementation notes
 
-- **Compact:** chunk into steps; disclose rather than scroll past; essential context above the fold (PAT-SH-014).
+- **Compact:** chunk into steps; essential context above the fold; choose disclosure or exposed scrolling by task (disclosure for selective reading, exposed content for comparison and sequential reading) (PAT-SH-014).
 - **Expanded:** more can be shown, but still grouped and prioritized; avoid filling the width with equally weighted options.
 - **All:** empty states and onboarding explain, briefly, what the space is for (PAT-SH-012, PAT-SH-013).
 

@@ -9,7 +9,7 @@ viewports: [compact, medium, expanded, large, extra-large]
 inputs: [touch, pointer, keyboard, assistive-tech]
 principles: [P-05, P-02, P-03, P-08]
 dimensions: [D-06, D-02, D-03]
-gates: [QG-001, QG-004, QG-020]
+gates: [QG-001, QG-004, QG-020b]
 related: [PAT-MO-008, PAT-RS-003, PAT-SH-002, PAT-SH-015, PAT-DT-002, PAT-SH-005]
 evidence_strength: moderate
 status: active
@@ -33,7 +33,7 @@ Showing everything at once overwhelms users. Hiding too much makes needed inform
    - Prefer showing content openly, or with an in-page overview and anchor links, when users need most sections or must compare across them.
    - Allow several sections open at once unless there is a strong reason not to.
    - Headings must be descriptive.
-4. **Use correct disclosure semantics.** The trigger is a real button with an expanded state (`aria-expanded`); Enter and Space toggle it. The revealed content follows the trigger in focus order (QG-004). Expanding never moves focus or navigates (QG-020).
+4. **Use correct disclosure semantics.** The trigger is a real button with an expanded state (`aria-expanded`); Enter and Space toggle it. The revealed content follows the trigger in focus order (QG-004). Expanding never moves focus or navigates (QG-020b).
 5. **Use "show more" for lists only with a discoverable expansion.** Keep selected values visible even when the list is collapsed. Avoid nested scroll areas.
 6. **Use steppers and wizards to reduce what users consider at once**, not to inflate step counts.
    - Show progress ("Step 2 of 4", with step names).
@@ -89,7 +89,7 @@ Showing everything at once overwhelms users. Hiding too much makes needed inform
 
 - Principles: P-05, P-02, P-03, P-08
 - Dimensions: D-06, D-02, D-03
-- Gates: QG-001, QG-004, QG-020
+- Gates: QG-001, QG-004, QG-020b
 - Patterns: PAT-MO-008 (truncation), PAT-RS-003 (content prioritization), PAT-SH-002 (forms), PAT-SH-015 (dialogs vs inline expansion), PAT-DT-002 (hierarchical navigation), PAT-SH-005 (filter value lists)
 
 ## Change log

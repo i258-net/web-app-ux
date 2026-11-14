@@ -48,10 +48,10 @@ Variants may add accelerators but never remove the baseline path.
 
 - **E3** MDN, "`<input type="date">`". https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/date — (verified 2026-11-08) Picker appearance "varies based on the browser and operating system"; displayed date follows locale while `value` is always `yyyy-mm-dd`. MDN does not say when the control is unsuitable; our "far-from-today" advice is interpretation.
 - **E3** MDN, "`<select>`". https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select — (verified 2026-11-08) `multiple` uses Ctrl/Command or Shift with click; keyboard multi-selection "not standardized"; tell users more than one option can be selected.
-- **E4** W3C WAI, "APG combobox". https://www.w3.org/WAI/ARIA/apg/patterns/combobox/ — Down Arrow enters the popup, Escape dismisses, Enter accepts; editable comboboxes keep platform text editing.
-- **E4** W3C WAI, "APG listbox". https://www.w3.org/WAI/ARIA/apg/patterns/listbox/ — Type-ahead recommended in longer lists; recommended multi-select model lets Space toggle without modifiers.
-- **E4** W3C WAI, "APG grid". https://www.w3.org/WAI/ARIA/apg/patterns/grid/ — Managed Tab entry and arrow-key navigation for grid composites (e.g. calendars).
-- **E4** W3C WAI, "APG slider". https://www.w3.org/WAI/ARIA/apg/patterns/slider/ — Arrow/Home/End keys; some touch AT may not synthesize the key events.
+- **E3** W3C WAI, "APG combobox". https://www.w3.org/WAI/ARIA/apg/patterns/combobox/ — Down Arrow enters the popup, Escape dismisses, Enter accepts; editable comboboxes keep platform text editing.
+- **E3** W3C WAI, "APG listbox". https://www.w3.org/WAI/ARIA/apg/patterns/listbox/ — Type-ahead recommended in longer lists; recommended multi-select model lets Space toggle without modifiers.
+- **E3** W3C WAI, "APG grid". https://www.w3.org/WAI/ARIA/apg/patterns/grid/ — Managed Tab entry and arrow-key navigation for grid composites (e.g. calendars).
+- **E3** W3C WAI, "APG slider". https://www.w3.org/WAI/ARIA/apg/patterns/slider/ — Arrow/Home/End keys; some touch AT may not synthesize the key events.
 - **E3** MDN, "inputmode". https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode — Hints a virtual keyboard; `numeric` and `decimal` differ; no validity constraint.
 - **E1** W3C, "WCAG 2.2 — 2.5.7 Dragging Movements". https://www.w3.org/TR/WCAG22/#dragging-movements and "2.1.1 Keyboard". https://www.w3.org/TR/WCAG22/#keyboard — Non-drag single-pointer alternative; all functionality by keyboard.
 - **E4** Nielsen Norman Group, "Drag–and–Drop: How to Design for Ease of Use". https://www.nngroup.com/articles/drag-drop/ — Grab cues, drop previews; dragging can be imprecise or physically hard.

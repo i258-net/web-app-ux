@@ -34,7 +34,7 @@ Devices change shape and input while people are using them. A phone rotates in t
 1. **Support both orientations** unless a specific orientation is essential to the function (QG-013). Do not lock orientation via the manifest or with "please rotate" overlays.
 2. **Design for short heights.** Landscape phones have little height: collapse sticky headers, avoid stacked fixed bars, and keep the focused field visible when the virtual keyboard opens.
 3. **Preserve state through every change.** Form values, selection, scroll position, open panes and dialogs, and filters must survive rotation, resize, unfold, and window-class transitions. Keep state in the model or URL, not in layout-specific component instances that unmount on a breakpoint ([PAT-RS-002](PAT-RS-002-layout-reflow-canonical-layouts.md)).
-4. **Re-evaluate continuously.** Listen for changes (media-query `change` events, resize observers) instead of classifying once at load. Capability media features can change when a mouse or keyboard is attached ([PAT-RS-009](PAT-RS-009-input-detection-touch-vs-pointer.md)).
+4. **Re-evaluate continuously.** Listen for changes (media-query `change` events, resize observers) instead of classifying once at load. Pointer/hover capability media features can change when a pointing device is attached or removed; attaching a keyboard does not change them, so keyboard paths must simply always work ([PAT-RS-009](PAT-RS-009-input-detection-touch-vs-pointer.md)).
 5. **Foldables: continuous layout first, segments as enhancement.**
    - Without segment information, treat an unfolded device as a normal medium/expanded window.
    - Where `horizontal-viewport-segments` / `vertical-viewport-segments` and `env(viewport-segment-*)` are supported, place related panes on either side of the fold (list-detail fits naturally) and keep interactive controls and text off the hinge area.
@@ -84,7 +84,7 @@ Devices change shape and input while people are using them. A phone rotates in t
 - In a landscape phone with the keyboard open, is the focused field visible? [running app]
 - On a foldable (or emulator) with segments exposed, are controls and text kept off the hinge? [running app]
 - On a tablet with keyboard and trackpad, and on a touch laptop, does every function work with each input in the same session? [running app] [user study]
-- Does attaching or detaching a mouse or keyboard update capability-dependent styling without reload? [running app]
+- Does attaching or detaching a mouse or trackpad update capability-dependent styling without reload? [running app] Does every function remain keyboard-operable regardless of what is attached? [running app]
 
 ## Related
 

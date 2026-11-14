@@ -16,7 +16,7 @@ updated: 2026-11-08
 
 Users accomplish what they came to do, completely and correctly, with the fewest steps, decisions, and inputs the task genuinely requires. Effectiveness (can it be done at all, without error) comes before efficiency (how fast). An interface that is fast but produces wrong results, or that only experts can finish, has failed this principle.
 
-Effectiveness and efficiency are two of the three components of usability as defined in ISO 9241-11 (the third is satisfaction), and the first-listed quality attributes in Nielsen's definition of usability. They are the reason the rest of this knowledge base exists.
+Effectiveness and efficiency are two of the three components of usability as defined in ISO 9241-11 (the third is satisfaction). Nielsen's five quality components (learnability, efficiency, memorability, errors, satisfaction) overlap: efficiency is explicit, and effectiveness is covered by errors and learnability. They are the reason the rest of this knowledge base exists.
 
 ## Why it matters
 

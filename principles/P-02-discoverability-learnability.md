@@ -18,7 +18,7 @@ Users can find the functions they need and learn how to use them from the interf
 
 ## Why it matters
 
-- Functions that cannot be found do not exist for the user. NN/g's research on hidden navigation found that hiding navigation behind a menu reduced its discoverability and use compared with visible navigation (E2; tested on both mobile and desktop).
+- Functions that cannot be found do not exist for the user. NN/g's research on hidden navigation found that hiding navigation behind a menu reduced its discoverability and use compared with visible or partly visible navigation (E2; 179 participants, six sites; on mobile the comparison was hidden versus combo navigation, since a fully visible mobile condition was not fully tested).
 - Gestures have no natural signifiers; NN/g and Apple both warn that gesture-only interactions must be discoverable or redundant (E4/E3).
 - "Recognition rather than recall" (Nielsen heuristic 6) explains why visible options beat memorized commands for most users (E4).
 

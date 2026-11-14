@@ -4,8 +4,8 @@ title: Keyboard navigation, tab order, roving tabindex, skip links, and shortcut
 type: pattern
 scope: desktop
 topics: [keyboard, tab-order, roving-tabindex, skip-link, shortcuts, accelerators, discoverability, conflicts, wcag-2.1.4]
-platforms: [desktop, tablet]
-viewports: [medium, expanded, large, extra-large]
+platforms: [desktop, tablet, mobile]
+viewports: [compact, medium, expanded, large, extra-large]
 inputs: [keyboard, pointer, assistive-tech]
 principles: [P-12, P-07, P-02, P-09]
 dimensions: [D-08, D-03, D-01]
@@ -19,6 +19,8 @@ updated: 2026-11-08
 # Keyboard navigation, tab order, roving tabindex, skip links, and shortcuts
 
 ## Problem
+
+> Baseline keyboard operability applies at every viewport, including phones with external keyboards (PAT-RS-009); this pattern lives under `desktop/` because accelerators and dense keyboard workflows are most valuable there.
 
 Keyboard operation is two things at once. It is a baseline accessibility requirement for people who cannot use a pointer, and it is the main speed tool for expert desktop users, including iPad users with a hardware keyboard. Products fail at both ends. Custom widgets can't be reached or escaped, every row in a 200-row table is its own Tab stop, focus is invisible, and the sidebar repeats on every page. At the other end, single-letter shortcuts fire while someone is dictating into a comment field, shortcuts take over browser or screen-reader keys, or shortcuts exist that nobody can find.
 
@@ -44,6 +46,7 @@ Keyboard operation is two things at once. It is a baseline accessibility require
 
 ## Evidence
 
+- **E1** W3C, WCAG 2.2 SC 2.4.13 Focus Appearance (AAA). https://www.w3.org/TR/WCAG22/#focus-appearance — indicator area at least that of a 2 CSS px perimeter and 3:1 change contrast between focused and unfocused states (F-SP-15).
 - **E1** W3C, WCAG 2.2 SC 2.1.1, 2.1.2, 2.1.4, 2.4.1, 2.4.3, 2.4.7, 2.4.11. https://www.w3.org/TR/WCAG22/#keyboard, https://www.w3.org/TR/WCAG22/#character-key-shortcuts, https://www.w3.org/TR/WCAG22/#focus-order, https://www.w3.org/TR/WCAG22/#focus-visible, https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum. Normative keyboard, focus, bypass, and character-shortcut requirements (F-SP-08/09/10/12/13/14, F-DX-20, F-DX-25).
 - **E3** W3C WAI APG, "Developing a Keyboard Interface". https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/. Roving tabindex and one Tab stop per composite (F-DX-24). Shortcut conflicts with OS, browser, and AT can block essential functions and should be avoided or mitigated (F-DX-21).
 - **E3** W3C WAI APG, Menubar and Tabs patterns. https://www.w3.org/WAI/ARIA/apg/patterns/menubar/, https://www.w3.org/WAI/ARIA/apg/patterns/tabs/. Role-specific keyboard contracts (F-SP-38, F-SP-39). APG is non-normative.

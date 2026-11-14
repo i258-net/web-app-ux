@@ -37,9 +37,9 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 **Anchors:**
 1. A primary task cannot be completed on a supported device, or requires workarounds (zooming, external tools).
 2. Tasks completable but with redundant steps, repeated data entry, or unclear completion state.
-3. Tasks completable in a reasonable number of steps; defaults sensible; some redundant confirmations or detours.
-4. Minimal steps; smart defaults; frequent tasks accelerated on pointer/keyboard; mobile flows trimmed to essentials.
-5. Context-aware shortcuts (recent items, remembered choices, prefill), near-zero redundant entry, graceful interruption and resume.
+3. Tasks completable with no more than a few steps beyond the minimum the task requires (count: fields, screens, confirmations); defaults sensible; some redundant confirmations or detours.
+4. Step count matches the minimum for the task on every evaluated context; defaults correct for most users; frequent tasks have at least one accelerator (shortcut, bulk action, recents) on pointer/keyboard; mobile flows contain only the inputs the task needs.
+5. As 4, and the system removes steps the user would otherwise repeat (prefill from known data, remembered choices), an interrupted task can be resumed where it was left, and the evaluator could not identify a removable step.
 
 **Draws on:** P-01, P-07, P-14. Patterns: `PAT-SH-*` forms and selection, `PAT-DT-*` expert workflows, `PAT-PW-*` session restoration.
 
@@ -85,7 +85,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 2. Targets small or crowded; primary actions out of comfortable reach; affordances ambiguous.
 3. Targets meet minimums; affordances conventional; a few gesture-only or hover-only conveniences without fallback.
 4. Comfortable targets and spacing; primary actions placed for the modality; every gesture and hover has a visible alternative.
-5. Interaction adapts to detected input (coarse/fine pointer) at runtime; expert and novice paths both discoverable.
+5. Every function is operable and comfortable with each supported input simultaneously (touch, pointer, keyboard on the same device), whether by one inclusive control or by capability-aware adaptation; expert and novice paths both discoverable.
 
 **Draws on:** P-02, P-06. Patterns: `PAT-MO-*` targets, reachability, gestures; `PAT-DT-*` hover, pointer, keyboard; `PAT-RS-*` touch vs pointer affordances. Gates: QG target size, hover/focus content, pointer gestures, dragging.
 
@@ -131,7 +131,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 2. Flat hierarchy, cramped or overlong lines, inconsistent spacing, decorative motion that distracts.
 3. Clear enough hierarchy; readable; some inconsistency or over-dense/over-sparse regions.
 4. Deliberate hierarchy at every viewport; bounded measure; consistent type scale; purposeful motion.
-5. Visual system feels intentional and distinctive while remaining legible and calm; delight never costs clarity.
+5. As 4, and the evaluator finds no screen where hierarchy, spacing, or type deviates from the system, and no decorative element that competes with the primary action or delays a task. (Distinctiveness is a craft judgment reported separately in prose, not a level criterion.)
 
 **Draws on:** P-08, P-15. Patterns: `PAT-RS-*` typography, adaptive density, visual hierarchy; `PAT-DT-*` wide layouts. Gates: contrast, text resize, text spacing, reflow.
 
@@ -144,7 +144,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 **Covers:** Words are plain and task-oriented; the amount of information per step matches the decision; progressive disclosure hides complexity until needed; the interface does not require memory across screens.
 
 **Device context:**
-- *Compact:* chunked steps; disclosure instead of long pages; essential info before the fold of the first screen.
+- *Compact:* chunked steps; essential info before the fold of the first screen; disclosure or scrolling chosen by task (disclosure for selective reading, exposed content for comparison and reading in sequence).
 - *Expanded:* more can be shown at once, but not everything; grouping and scanning aids.
 - *All:* consistent terminology; recognition over recall; help where needed.
 
@@ -174,7 +174,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 1. Silent failures; data loss on error; destructive actions without protection; no loading indication for long waits.
 2. Vague or technical errors; feedback delayed or misplaced; over-confirmation of trivial actions.
 3. Errors identified and explained; loading indicated; confirmation present for destructive actions.
-4. Specific, actionable messages at the point of error; undo for most destructive actions; optimistic UI with reconciliation; status announced to AT.
+4. Specific, actionable messages at the point of error; undo or an equivalent recovery for most destructive actions; feedback for every action within the response-time limits, honest about whether a change is confirmed (optimistic or server-confirmed, as fits the stakes); status announced to AT.
 5. Prevents errors through constraints and smart defaults; recovery paths preserve all user input; failure modes designed.
 
 **Draws on:** P-10, P-11. Patterns: `PAT-SH-*` validation, error recovery, loading states, destructive actions, feedback; `PAT-PW-*` offline, unsaved changes. Gates: status messages, error identification, error prevention.
@@ -197,7 +197,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 2. Multiple Level A/AA failures; partial screen-reader support; focus management absent after dynamic changes.
 3. Mostly conformant; minor AA issues; some custom widgets with incomplete keyboard support.
 4. Conforms to WCAG 2.2 AA where verified; focus managed; AT tested on at least one platform per device class.
-5. Exceeds AA in meaningful ways (target size enhanced, focus appearance, consistent help); inclusive beyond conformance.
+5. Exceeds AA in meaningful ways (SC 2.5.5 target size enhanced, SC 2.4.13 focus appearance, SC 2.3.3 animation from interactions); AT tested on each supported platform; inclusive beyond conformance.
 
 **Draws on:** P-12. Gates: the WCAG-derived QG set. Patterns: keyboard navigation, focus management, drag alternatives, text resize/reflow.
 
@@ -210,7 +210,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 **Covers:** Perceived and measured responsiveness; stability under slow or lost connectivity; honesty of UI (no dark patterns); privacy respected; permissions requested in context.
 
 **Device context:**
-- *Mobile:* mid-range device and throttled network baseline; skeletons for long loads; no layout shift under late-loading content.
+- *Mobile:* mid-range device and throttled network baseline; loading states that preserve layout where the layout is known (skeleton or reserved space) and indicate progress otherwise; no layout shift under late-loading content.
 - *Desktop:* heavy views (tables, dashboards) stay interactive; large uploads/downloads show progress.
 - *PWA/web:* Core Web Vitals; offline fallback; permission prompts after user intent; install prompts not on first load.
 
@@ -219,7 +219,7 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 2. Long unexplained waits; layout shifts; connectivity failures surface as raw errors; unclear data use.
 3. Acceptable speed; loading states present; offline handled with a message; permissions requested with minimal context.
 4. Meets CWV "good" thresholds at p75 where measured; graceful degradation; contextual permission requests; transparent, reversible choices.
-5. Resilient by design: optimistic updates with sync, queued actions, honest and respectful defaults.
+5. Resilient by design: work continues or queues safely through connectivity loss where the task allows, failures never lose user input, and defaults are honest and respectful.
 
 **Draws on:** P-13, P-14. Patterns: `PAT-SH-*` loading states; `PAT-PW-*` offline, caching, notifications/permissions, performance. Gates: CWV thresholds (recommended), timing adjustable (standard).
 
@@ -241,8 +241,8 @@ Each dimension below lists: what it covers, the **device-contextual criteria** (
 1. A supported device class is effectively unsupported (desktop is a phone layout stretched, or mobile is a desktop layout shrunk).
 2. Works everywhere but one device class is clearly an afterthought; input assumptions tied to width.
 3. Responsive and functional on all devices; adaptations generic; some convention mismatches.
-4. Purposeful adaptation per device; input detection at runtime; conventions respected per platform without forcing them elsewhere.
-5. Each device feels native to its context; seamless continuity across devices; adaptation invisible to users.
+4. Purposeful adaptation per device; hybrid inputs work without width-based assumptions; conventions respected per platform without forcing them elsewhere.
+5. As 4, and the evaluator finds no task that is slower or less comfortable on one supported device than the device's constraints require; a task begun on one device can be continued on another without re-entering data (where multi-device use is supported).
 
 **Draws on:** P-09, P-06, P-01. Patterns: all of `PAT-RS-*`; `PAT-PW-*` browser vs installed.
 

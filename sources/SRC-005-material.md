@@ -108,6 +108,6 @@ None of these appear in any findings fetch log. Fetch them and add a finding bef
 
 | Title | URL | Published/updated | Accessed | Evidence class | Finding IDs |
 |---|---|---|---|---|---|
-| Material Design 3, Accessibility (touch targets) | <https://m3.material.io/foundations/accessible-design/accessibility-basics> | not recorded | not recorded | E3 | none (principle only: P-06) |
+| Material Design 3, Accessibility (touch targets) | <https://m3.material.io/foundations/accessible-design/accessibility-basics> | — | 2026-11-08 (404; P-06 now cites Foundations: Designing) | E3 | none |
 | Material Design 3 (home) | <https://m3.material.io/> | not recorded | not recorded | E3 | none (principle only: P-09) |
 | Material Design 3, Motion | <https://m3.material.io/styles/motion/overview> | not recorded | not recorded | E3 | none (principle only: P-15) |

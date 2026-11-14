@@ -203,7 +203,8 @@
   "scope": "desktop",
   "platforms": [
    "desktop",
-   "tablet"
+   "tablet",
+   "mobile"
   ],
   "inputs": [
    "keyboard",

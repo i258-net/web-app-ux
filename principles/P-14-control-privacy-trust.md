@@ -19,7 +19,7 @@ Users stay in charge. They can leave, cancel, undo, and change their minds; the 
 ## Why it matters
 
 - "User control and freedom" is Nielsen's heuristic 3: clearly marked exits, undo and redo (E4).
-- Permission prompts shown without context (on first load, before the user has done anything) are denied at high rates and, once denied, are hard to re-request on many platforms; web.dev and MDN both recommend asking in response to a user action with an explanation (E3). Chromium's own UX research on permission prompts informs this guidance (E3/E2).
+- Permission prompts shown without context (on first load, before the user has done anything) are easy to deny and, once denied, are hard to re-request on many platforms; MDN requires requesting notification permission from a user gesture and web.dev recommends explaining the value first (E3/E4). No denial-rate study is cited here; treat the harm as reasoned, not measured.
 - Deceptive patterns ("dark patterns") produce short-term metrics and long-term distrust; they are increasingly regulated (EU DSA, FTC guidance). NN/g and the deceptive.design catalog document common forms (E4).
 - Interruptive install prompts, modal sign-up walls, and notification nags are the PWA-specific versions of this failure.
 
@@ -39,7 +39,8 @@ Users stay in charge. They can leave, cancel, undo, and change their minds; the 
 ## Evidence
 
 - Nielsen, J. "10 Usability Heuristics." https://www.nngroup.com/articles/ten-usability-heuristics/ — E4 (heuristic 3).
-- web.dev, "Permissions UX" / Learn PWA: Installation prompt. https://web.dev/learn/pwa/installation-prompt — E3.
+- web.dev, Learn PWA: Installation prompt (install promotion timing). https://web.dev/learn/pwa/installation-prompt — E3.
+- web.dev, push notification permissions UX. https://web.dev/articles/push-notifications-permissions-ux — E4.
 - MDN, Notifications API: Using the Notifications API (request permission on user gesture). https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API — E3.
 - Brignull, H. Deceptive Design (formerly Dark Patterns) catalog. https://www.deceptive.design/ — E4.
 

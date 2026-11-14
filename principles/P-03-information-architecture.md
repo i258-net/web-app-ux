@@ -19,7 +19,7 @@ Content and functions are grouped and labeled the way users think about them, no
 ## Why it matters
 
 - Findability precedes usability: users who cannot locate a function cannot use it. NN/g's IA guidance recommends validating categories with card sorting and tree testing because designers' groupings routinely differ from users' (E4, methodology-backed).
-- Baymard's category-navigation research found that unclear or overlapping category names cause users to pick the wrong path and conclude a product does not exist (E2; e-commerce, but the mechanism generalizes).
+- Baymard's mobile menu research recommends exposing main categories directly and giving explicit access to the broad category at each level, because users otherwise pick the wrong path (E2; e-commerce; see PAT-SH-001 and PAT-MO-003 for the specific articles). The broader claim that overlapping labels make users conclude an item does not exist is our synthesis, not a cited finding.
 - Deep hierarchies multiply the chance of a wrong turn at each level; breadth vs depth is a tradeoff, not a rule.
 
 ## How to recognize it
@@ -39,7 +39,7 @@ Content and functions are grouped and labeled the way users think about them, no
 
 - Nielsen Norman Group, "Information Architecture" topic and card-sorting guidance. https://www.nngroup.com/articles/card-sorting-definition/ — E4 (method guidance).
 - Whitenton, K. "Flat vs. Deep Website Hierarchies." NN/g. https://www.nngroup.com/articles/flat-vs-deep-hierarchy/ — E4.
-- Baymard Institute, homepage and category navigation research (public articles). https://baymard.com/blog — E2; e-commerce context.
+- Baymard Institute, mobile navigation and category research: see the article-level citations in PAT-SH-001 and PAT-MO-003 (F-NB-66, F-NB-67) — E2; e-commerce context.
 - Rosenfeld, Morville, Arango. *Information Architecture: For the Web and Beyond* (4th ed.). — E4 (foundational text; not freely available).
 
 ## Evaluation

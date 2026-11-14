@@ -9,7 +9,7 @@ viewports: [medium, expanded, large, extra-large]
 inputs: [pointer, keyboard, touch, assistive-tech]
 principles: [P-02, P-06, P-10, P-12]
 dimensions: [D-03, D-06, D-08]
-gates: [QG-012, QG-041, QG-042, QG-005, QG-006, QG-016, QG-020]
+gates: [QG-012, QG-041, QG-042, QG-005, QG-006, QG-016, QG-020a]
 related: [PAT-DT-002, PAT-DT-007, PAT-DT-008, PAT-RS-009, PAT-RS-011, PAT-SH-008, PAT-SH-014]
 evidence_strength: strong
 status: active
@@ -32,7 +32,7 @@ With a mouse or trackpad, hover is a cheap channel. It can confirm that somethin
 4. **Meet WCAG 1.4.13 for author-built hover and focus content.** It must be **dismissible** without moving pointer or focus (Escape). It must be **hoverable**, so the pointer can move onto it without it closing, which means no gap that closes the panel. It must be **persistent** until the trigger is removed, the user dismisses it, or it is no longer valid. Do not auto-hide on a timer.
 5. **Hover-revealed actions need focus and no-hover fallbacks.** If row actions appear on hover, they also appear when the row or any control in it has focus. They show permanently when hover is unavailable. Detect that with `@media (hover: none)` / `(any-hover: none)` or pointer events, never from viewport width (QG-042, PAT-RS-009). The most important action, or an overflow "…" button, should be visible at all times (PAT-DT-008).
 6. **Icon-only controls get an accessible name and a visible label on hover/focus.** The tooltip text should match the accessible name (QG-016).
-7. **Do not change context on hover or focus.** Hovering or focusing must not navigate, submit, or open a modal (QG-020).
+7. **Do not change context on hover or focus.** Hovering or focusing must not navigate, submit, or open a modal (QG-020a).
 
 ## Evidence
 
@@ -74,7 +74,7 @@ The overall strength is "strong" because the core rule rests on E1, and E3 and E
 
 - Patterns: [PAT-DT-002](PAT-DT-002-sidebar-hierarchical-navigation.md), [PAT-DT-007](PAT-DT-007-data-tables-grids.md), [PAT-DT-008](PAT-DT-008-contextual-actions-menus.md), PAT-RS-009, PAT-RS-011, PAT-SH-008, PAT-SH-014
 - Principles: [P-02](../../principles/P-02-discoverability-learnability.md), [P-06](../../principles/P-06-interaction-ergonomics.md), [P-10](../../principles/P-10-feedback-predictability.md), [P-12](../../principles/P-12-accessibility-inclusion.md)
-- Rubric: [D-03, D-06, D-08](../../rubric/dimensions.md); gates [QG-005, QG-006, QG-012, QG-016, QG-020, QG-041, QG-042](../../rubric/quality-gates.md)
+- Rubric: [D-03, D-06, D-08](../../rubric/dimensions.md); gates [QG-005, QG-006, QG-012, QG-016, QG-020a, QG-041, QG-042](../../rubric/quality-gates.md)
 
 ## Change log
 
